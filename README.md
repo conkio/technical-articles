@@ -22,5 +22,5 @@ An explanation of the differences between broadband Internet access
 and Ethernet, including cabling, Ethernet frames, VDSL, fiber-optic
 networks, and first-mile access technologies.
 
-[Read article](broadband-vs-ethernet/)
+[Read article](broadband-vs-ethernet/) ·
 [PDF](broadband-vs-ethernet/next-article.pdf)
