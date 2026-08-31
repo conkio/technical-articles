@@ -1,5 +1,8 @@
 # CPU Cores vs Threads: Theory, SMT, and Benchmark Performance
 
+**Constantin Kioulafas**  
+*Published August 2026*
+
 [PDF version](cpu-cores-vs-threads-theory-smt-and-benchmark-performance.pdf)
 
 In the late 1970s and early 1980s, desktop computer operating systems had very basic requirements by today’s standards. Operating systems like CP/M and MS DOS were limited to one user at a time who could only execute one program at a time.
