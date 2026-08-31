@@ -16,9 +16,11 @@ benchmarks on a six-core AMD EPYC processor.
 [Read article](cpu-cores-vs-threads/) ·
 [PDF](cpu-cores-vs-threads/cpu-cores-vs-threads.pdf)
 
-### [Next article]
+### Broadband vs Ethernet: How They Differ and Work Together
 
-Brief description.
+An explanation of the differences between broadband Internet access
+and Ethernet, including cabling, Ethernet frames, VDSL, fiber-optic
+networks, and first-mile access technologies.
 
-[Read article](next-article/) ·
-[PDF](next-article/next-article.pdf)
+[Read article](broadband-vs-ethernet/)
+[PDF](broadband-vs-ethernet/next-article.pdf)
