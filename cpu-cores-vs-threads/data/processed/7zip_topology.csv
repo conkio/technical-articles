@@ -1,0 +1,11 @@
+timestamp,topology,threads,repetition,cpu_affinity,internal_iterations,compression_rating,decompression_rating,total_rating,source_file
+2026-08-29T05:40:12+00:00,3physical-smt,6,1,"0,6,1,7,2,8",3,46636.0,33940.0,40288.0,7zip-topology-3physical-smt-r1-result.txt
+2026-08-29T05:41:24+00:00,3physical-smt,6,2,"0,6,1,7,2,8",3,46410.0,33800.0,40105.0,7zip-topology-3physical-smt-r2-result.txt
+2026-08-29T05:44:41+00:00,3physical-smt,6,3,"0,6,1,7,2,8",3,45919.0,33824.0,39871.0,7zip-topology-3physical-smt-r3-result.txt
+2026-08-29T05:45:53+00:00,3physical-smt,6,4,"0,6,1,7,2,8",3,46409.0,33869.0,40139.0,7zip-topology-3physical-smt-r4-result.txt
+2026-08-29T05:49:11+00:00,3physical-smt,6,5,"0,6,1,7,2,8",3,45846.0,33827.0,39837.0,7zip-topology-3physical-smt-r5-result.txt
+2026-08-29T05:39:10+00:00,6physical,6,1,"0,1,2,3,4,5",3,60246.0,40434.0,50340.0,7zip-topology-6physical-r1-result.txt
+2026-08-29T05:42:35+00:00,6physical,6,2,"0,1,2,3,4,5",3,60134.0,40049.0,50091.0,7zip-topology-6physical-r2-result.txt
+2026-08-29T05:43:38+00:00,6physical,6,3,"0,1,2,3,4,5",3,59604.0,40301.0,49952.0,7zip-topology-6physical-r3-result.txt
+2026-08-29T05:47:05+00:00,6physical,6,4,"0,1,2,3,4,5",3,59655.0,40260.0,49957.0,7zip-topology-6physical-r4-result.txt
+2026-08-29T05:48:08+00:00,6physical,6,5,"0,1,2,3,4,5",3,59700.0,39925.0,49812.0,7zip-topology-6physical-r5-result.txt

@@ -1,0 +1,98 @@
+CPU Benchmark Test Environment
+==============================
+
+Hardware
+--------
+Provider: OVH
+System type: Bare-metal server
+Processor: AMD EPYC 4244P 6-Core Processor
+Sockets: 1
+Physical cores: 6
+Hardware threads per core: 2
+Logical CPUs: 12
+Memory: approximately 64 GB
+Virtualization: none
+
+CPU topology
+------------
+Core 0: logical CPUs 0,6
+Core 1: logical CPUs 1,7
+Core 2: logical CPUs 2,8
+Core 3: logical CPUs 3,9
+Core 4: logical CPUs 4,10
+Core 5: logical CPUs 5,11
+
+Cache
+-----
+L1d: 192 KiB total (6 instances)
+L1i: 192 KiB total (6 instances)
+L2: 6 MiB total (6 instances)
+L3: 32 MiB total (1 instance)
+
+Operating system
+----------------
+Distribution: AlmaLinux 9.8
+Architecture: x86_64
+Kernel: 5.14.0-611.34.1.el9_7.x86_64
+
+CPU configuration
+-----------------
+Scaling driver: acpi-cpufreq
+Governor: performance
+CPU boost: enabled
+
+Benchmark software
+------------------
+sysbench: 1.0.20
+7-Zip: 26.02 (x64)
+sysstat/mpstat: used for CPU idle validation
+
+Analysis software
+-----------------
+Python: 3.9.25
+
+Benchmark configuration
+-----------------------
+sysbench CPU test:
+- Prime limit: 20000
+- Test duration: 30 seconds
+- Five independent repetitions per thread count
+- Thread counts tested: 1 through 12
+
+7-Zip built-in benchmark:
+- Three internal iterations per run
+- Five independent repetitions per thread count
+- Thread counts tested: 1 through 12
+
+CPU affinity
+------------
+For thread counts 1 through 6, benchmark threads were assigned to logical
+CPUs 0 through 5, placing one benchmark thread on each physical core.
+
+For thread counts 7 through 12, the second hardware thread from each
+physical core was added progressively using logical CPUs 6 through 11.
+
+Topology comparison:
+- Six physical cores, one hardware thread per core:
+  CPUs 0,1,2,3,4,5
+- Three physical cores, both hardware threads per core:
+  CPUs 0,6,1,7,2,8
+
+Validation procedure
+--------------------
+The tests were carried out on a private working server. There were no other
+interactive users on the system during testing.
+
+CPU activity was checked before and after every benchmark run using mpstat.
+All 12 logical CPUs were sampled for five seconds.
+
+A benchmark was only accepted if every logical CPU averaged at least 94%
+idle over the five-second validation period.
+
+If the CPU idle level fell below this threshold, usually as a result of a
+scheduled background process or other temporary activity, the script waited
+and repeated the check rather than immediately running or accepting the
+benchmark.
+
+The operating system, running kernel, CPU governor, and benchmark
+configuration remained unchanged throughout the tests.

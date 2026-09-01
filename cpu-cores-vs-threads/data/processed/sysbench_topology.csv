@@ -1,0 +1,11 @@
+timestamp,topology,threads,repetition,cpu_affinity,duration_seconds,prime_limit,events_per_second,source_file
+2026-08-29T03:50:43+00:00,3physical-smt,6,1,"0,6,1,7,2,8",30,20000,7576.22,topology-3physical-smt-r1-result.txt
+2026-08-29T03:51:33+00:00,3physical-smt,6,2,"0,6,1,7,2,8",30,20000,7576.52,topology-3physical-smt-r2-result.txt
+2026-08-29T03:54:23+00:00,3physical-smt,6,3,"0,6,1,7,2,8",30,20000,7576.27,topology-3physical-smt-r3-result.txt
+2026-08-29T03:55:13+00:00,3physical-smt,6,4,"0,6,1,7,2,8",30,20000,7576.05,topology-3physical-smt-r4-result.txt
+2026-08-29T03:58:03+00:00,3physical-smt,6,5,"0,6,1,7,2,8",30,20000,7575.09,topology-3physical-smt-r5-result.txt
+2026-08-29T03:49:53+00:00,6physical,6,1,"0,1,2,3,4,5",30,20000,13334.82,topology-6physical-r1-result.txt
+2026-08-29T03:52:23+00:00,6physical,6,2,"0,1,2,3,4,5",30,20000,13337.58,topology-6physical-r2-result.txt
+2026-08-29T03:53:13+00:00,6physical,6,3,"0,1,2,3,4,5",30,20000,13315.45,topology-6physical-r3-result.txt
+2026-08-29T03:56:23+00:00,6physical,6,4,"0,1,2,3,4,5",30,20000,13341.27,topology-6physical-r4-result.txt
+2026-08-29T03:57:13+00:00,6physical,6,5,"0,1,2,3,4,5",30,20000,13348.34,topology-6physical-r5-result.txt
