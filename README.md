@@ -13,8 +13,8 @@ An examination of physical CPU cores and Simultaneous
 Multi-Threading, followed by controlled sysbench and 7-Zip
 benchmarks on a six-core AMD EPYC processor.
 
-[Read article](cpu-cores-vs-threads/) ·
-[PDF](cpu-cores-vs-threads/cpu-cores-vs-threads.pdf)
+[Read article](cpu-cores-vs-threads/article/) ·
+[PDF](cpu-cores-vs-threads/article/cpu-cores-vs-threads.pdf)
 
 ### Broadband vs Ethernet: How They Differ and Work Together
 
@@ -22,5 +22,5 @@ An explanation of the differences between broadband Internet access
 and Ethernet, including cabling, Ethernet frames, VDSL, fiber-optic
 networks, and first-mile access technologies.
 
-[Read article](broadband-vs-ethernet/) ·
-[PDF](broadband-vs-ethernet/next-article.pdf)
+[Read article](broadband-vs-ethernet/article/) ·
+[PDF](broadband-vs-ethernet/article/broadband-vs-ethernet.pdf)

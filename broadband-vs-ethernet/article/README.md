@@ -24,7 +24,7 @@ We’ll be taking a look at Ethernet cabling media and the protocol before discu
 
 Twisted-pair copper Ethernet cables are classified according to their category, which is based on the bandwidth frequency the cable can handle, the maximum data rate supported, and whether the cable is shielded or unshielded.
 
-![Ethernet cable](assets/ethernet-cable.png)
+![Ethernet cable](../assets/ethernet-cable.png)
 
 Typical Ethernet LAN connection speeds of 10 Mbps, 100 Mbps, and 1 Gbps use Category 5 and Category 5e (more commonly referred to as Cat5 and Cat5e respectively) and unshielded twisted pair (UTP) cables.
 
@@ -58,7 +58,7 @@ Recent developments in Very-high-bit-rate Digital Subscriber Line (VDSL) technol
 
 VDSL2 can support data rates above 100 Mbps, while Super VDSL (also referred to as VDSL2-Vplus) can offer around 300 Mbps downstream on short copper loops.
 
-![FTTC cabinet](assets/fttc-cabinet.png)
+![FTTC cabinet](../assets/fttc-cabinet.png)
 
 Providers will usually install a Fiber to the Curb (FTTC) cabinet in neighborhoods, with a fiber-optic cable connection from the data center and then use the existing copper lines to provide a VDSL connection between the cabinet and the subscriber’s premises.
 
