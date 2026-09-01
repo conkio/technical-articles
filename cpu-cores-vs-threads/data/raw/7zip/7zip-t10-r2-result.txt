@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:25:40+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 10
+CPU affinity: 0-9
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=10
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5100  5129  5130  5129  5129  5130  5130
+5T CPU Freq (MHz): 501% 4884   496% 5081  
+10T CPU Freq (MHz): 943% 4829   991% 5047  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  10 / 12 : 3FF
+RAM usage:   2224 MB (LP),  # Benchmark threads:     10
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      76219   908   8170  74146  |     653335   954   5838  55718
+23:      72025   909   8073  73385  |     642849   954   5827  55617
+24:      68704   904   8172  73871  |     630426   954   5798  55319
+25:      68177   913   8523  77843  |     618393   960   5731  55026
+22:      77972   923   8214  75851  |     651516   959   5792  55563
+23:      72096   915   8027  73458  |     642332   954   5827  55572
+24:      68048   901   8120  73165  |     631329   955   5798  55398
+25:      66724   888   8582  76184  |     618644   957   5753  55048
+22:      75907   915   8072  73843  |     642254   943   5808  54773
+23:      70969   891   8120  72309  |     642146   953   5827  55556
+24:      68368   903   8142  73510  |     631022   954   5803  55371
+25:      67779   898   8618  77388  |     617360   955   5751  54934
+----------------------------------  | ------------------------------
+Avr:     71082   906   8236  74579  |     635134   955   5796  55325
+Tot:             930   7016  64952

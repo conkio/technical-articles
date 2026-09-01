@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T05:19:25+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 10
+CPU affinity: 0-9
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=10
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5087  5129  5123  4936  4930  4891  4930
+5T CPU Freq (MHz): 488% 4946   496% 5051  
+10T CPU Freq (MHz): 979% 5009   991% 5036  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  10 / 12 : 3FF
+RAM usage:   2224 MB (LP),  # Benchmark threads:     10
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      77856   931   8137  75739  |     644415   946   5812  54957
+23:      68864   874   8027  70164  |     642051   958   5799  55548
+24:      68254   905   8105  73387  |     630111   955   5790  55291
+25:      64260   890   8242  73370  |     617345   955   5753  54932
+22:      77253   911   8248  75153  |     654258   956   5838  55797
+23:      71975   903   8120  73334  |     640219   953   5815  55389
+24:      68908   904   8195  74091  |     629524   956   5775  55240
+25:      65410   901   8290  74683  |     614800   953   5742  54706
+22:      70503   872   7863  68585  |     618961   954   5533  52787
+23:      68722   904   7746  70020  |     633678   964   5688  54823
+24:      67539   895   8112  72618  |     631257   958   5784  55392
+25:      61912   862   8203  70689  |     617522   958   5735  54948
+----------------------------------  | ------------------------------
+Avr:     69288   896   8107  72653  |     631178   955   5755  54984
+Tot:             926   6931  63818

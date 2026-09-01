@@ -1,0 +1,44 @@
+Timestamp: 2026-08-29T05:41:24+00:00
+Benchmark: 7-Zip built-in benchmark
+Topology: 3physical-smt
+Threads: 6
+CPU affinity: 0,6,1,7,2,8
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=6
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  4991  4918  4930  4930  4809  4916  4925
+3T CPU Freq (MHz): 298% 4920   300% 4910  
+6T CPU Freq (MHz): 600% 5120   598% 5127  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:   6 / 12 : 1C7
+RAM usage:   1334 MB (LP),  # Benchmark threads:      6
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      48853   569   8354  47524  |     399150   598   5691  34031
+23:      42917   542   8062  43728  |     392192   597   5679  33928
+24:      43434   565   8264  46701  |     379093   589   5650  33265
+25:      42073   558   8611  48038  |     379375   599   5641  33762
+22:      47103   559   8203  45823  |     397319   597   5672  33875
+23:      44643   557   8167  45486  |     392533   598   5679  33958
+24:      43039   563   8213  46276  |     386027   598   5663  33874
+25:      40779   547   8507  46560  |     373985   592   5626  33283
+22:      48379   566   8315  47063  |     397591   598   5669  33898
+23:      45179   562   8193  46033  |     392903   598   5682  33990
+24:      43021   559   8277  46257  |     386983   599   5673  33958
+25:      41537   556   8533  47426  |     379517   599   5641  33775
+----------------------------------  | ------------------------------
+Avr:     44246   559   8308  46410  |     388056   597   5664  33800
+Tot:             578   6986  40105

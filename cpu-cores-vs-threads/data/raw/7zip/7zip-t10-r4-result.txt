@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:57:04+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 10
+CPU affinity: 0-9
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=10
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5033  4930  4930  4930  4930  4890  4904
+5T CPU Freq (MHz): 443% 4363   474% 4671  
+10T CPU Freq (MHz): 955% 4887   957% 4864  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  10 / 12 : 3FF
+RAM usage:   2224 MB (LP),  # Benchmark threads:     10
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      77085   924   8115  74989  |     653277   951   5856  55713
+23:      70879   903   7996  72218  |     639797   951   5819  55353
+24:      66671   889   8061  71686  |     627106   950   5792  55028
+25:      66968   899   8504  76462  |     618620   956   5758  55046
+22:      78119   929   8181  75995  |     651604   954   5828  55570
+23:      69110   877   8027  70415  |     641980   955   5815  55541
+24:      68506   910   8097  73658  |     630885   957   5786  55359
+25:      66259   891   8489  75652  |     618768   957   5753  55059
+22:      76011   921   8029  73944  |     653984   956   5834  55773
+23:      72608   916   8073  73979  |     641627   954   5817  55511
+24:      68762   915   8083  73933  |     629249   955   5784  55216
+25:      66261   906   8349  75655  |     618489   956   5755  55034
+----------------------------------  | ------------------------------
+Avr:     70603   907   8167  74049  |     635449   954   5800  55350
+Tot:             931   6983  64700

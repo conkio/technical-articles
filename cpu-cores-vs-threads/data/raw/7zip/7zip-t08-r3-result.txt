@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:48:09+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 8
+CPU affinity: 0-7
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=8
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  4969  4926  4929  4895  4736  4929  4919
+4T CPU Freq (MHz): 370% 4561   397% 4957  
+8T CPU Freq (MHz): 756% 4805   772% 4922  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:   8 / 12 : 0FF
+RAM usage:   1779 MB (LP),  # Benchmark threads:      8
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      68935   719   9321  67060  |     529427   726   6217  45145
+23:      63370   735   8785  64567  |     524658   732   6202  45384
+24:      62004   745   8954  66667  |     523381   742   6192  45922
+25:      58630   708   9460  66942  |     512059   741   6150  45562
+22:      68009   696   9503  66159  |     539287   739   6226  45986
+23:      63577   737   8785  64778  |     532712   741   6219  46081
+24:      59719   705   9104  64210  |     523203   741   6192  45906
+25:      60013   728   9413  68521  |     512660   743   6140  45616
+22:      68650   707   9448  66783  |     537365   736   6223  45822
+23:      62237   705   8997  63412  |     532543   741   6219  46066
+24:      60438   735   8842  64984  |     521858   739   6192  45788
+25:      57799   706   9348  65993  |     512961   743   6140  45642
+----------------------------------  | ------------------------------
+Avr:     62782   719   9163  65840  |     525176   739   6193  45743
+Tot:             729   7678  55792

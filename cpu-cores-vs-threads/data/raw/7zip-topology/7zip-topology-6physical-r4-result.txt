@@ -1,0 +1,44 @@
+Timestamp: 2026-08-29T05:47:05+00:00
+Benchmark: 7-Zip built-in benchmark
+Topology: 6physical
+Threads: 6
+CPU affinity: 0,1,2,3,4,5
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=6
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  4969  4923  4926  4930  4851  4930  4930
+3T CPU Freq (MHz): 298% 5007   299% 5057  
+6T CPU Freq (MHz): 588% 5014   585% 4791  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:   6 / 12 : 03F
+RAM usage:   1334 MB (LP),  # Benchmark threads:      6
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      65264   558  11382  63489  |     474795   597   6783  40481
+23:      58215   552  10739  59314  |     470040   598   6798  40663
+24:      55045   548  10805  59185  |     458417   598   6732  40226
+25:      51797   530  11157  59141  |     450133   598   6702  40059
+22:      62739   560  10905  61033  |     474403   597   6774  40447
+23:      58532   553  10784  59638  |     469015   598   6784  40574
+24:      54731   542  10850  58847  |     459900   598   6751  40356
+25:      50532   525  10982  57697  |     451352   598   6712  40168
+22:      64839   559  11276  63076  |     474819   597   6783  40483
+23:      58883   554  10831  59995  |     464034   593   6771  40143
+24:      54734   541  10872  58851  |     461405   598   6770  40488
+25:      48686   511  10876  55589  |     438653   588   6641  39038
+----------------------------------  | ------------------------------
+Avr:     57000   545  10955  59655  |     462247   596   6750  40260
+Tot:             570   8852  49957

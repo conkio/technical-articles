@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:54:26+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 12
+CPU affinity: 0-11
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=12
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  4984  4929  4929  4929  4929  4930  4905
+6T CPU Freq (MHz): 597% 5091   596% 5084  
+12T CPU Freq (MHz): 1113% 4708   1192% 5021  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  12
+RAM usage:   2669 MB (LP),  # Benchmark threads:     12
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      86406  1125   7471  84056  |     762573  1177   5525  65024
+23:      79447  1108   7304  80947  |     751086  1182   5498  64973
+24:      76773  1112   7420  82547  |     736101  1181   5470  64588
+25:      70722  1057   7637  80748  |     716283  1173   5433  63731
+22:      83893  1099   7425  81611  |     764283  1183   5507  65170
+23:      79939  1109   7347  81449  |     751601  1184   5492  65018
+24:      76817  1105   7472  82594  |     719575  1158   5452  63138
+25:      69864  1050   7593  79768  |     634653  1046   5396  56468
+22:      77841  1035   7314  75724  |     756834  1173   5500  64535
+23:      79474  1099   7368  80975  |     750410  1182   5491  64915
+24:      75566  1090   7451  81249  |     736149  1182   5465  64592
+25:      70507  1052   7650  80503  |     718732  1176   5438  63949
+----------------------------------  | ------------------------------
+Avr:     77271  1087   7455  81014  |     733190  1166   5472  63842
+Tot:            1127   6463  72428

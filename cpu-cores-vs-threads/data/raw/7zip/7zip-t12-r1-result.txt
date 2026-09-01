@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:21:48+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 12
+CPU affinity: 0-11
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=12
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5122  5116  5130  5129  5127  5129  5130
+6T CPU Freq (MHz): 599% 5065   595% 5053  
+12T CPU Freq (MHz): 1117% 4728   1165% 4919  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  12
+RAM usage:   2669 MB (LP),  # Benchmark threads:     12
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      86088  1113   7525  83747  |     766401  1183   5524  65351
+23:      78475  1090   7336  79957  |     754281  1186   5500  65249
+24:      75397  1094   7410  81068  |     711845  1143   5466  62460
+25:      71884  1066   7700  82075  |     723635  1184   5436  64385
+22:      86792  1130   7471  84432  |     760595  1178   5506  64856
+23:      78348  1083   7368  79828  |     748942  1179   5494  64788
+24:      76736  1100   7499  82507  |     710533  1141   5462  62345
+25:      72826  1072   7756  83150  |     722926  1184   5433  64322
+22:      85746  1126   7410  83414  |     760272  1177   5510  64828
+23:      79268  1098   7357  80765  |     749984  1182   5491  64878
+24:      77275  1106   7510  83086  |     730637  1173   5466  64109
+25:      73465  1080   7769  83880  |     722489  1183   5435  64283
+----------------------------------  | ------------------------------
+Avr:     78525  1097   7509  82326  |     738545  1174   5477  64321
+Tot:            1135   6493  73323

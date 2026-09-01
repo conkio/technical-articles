@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:24:19+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 11
+CPU affinity: 0-10
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=11
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5104  5122  5127  5129  5129  5130  5129
+5T CPU Freq (MHz): 461% 4409   470% 4500  
+11T CPU Freq (MHz): 1079% 5023   1094% 5022  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  11 / 12 : 7FF
+RAM usage:   2224 MB (LP),  # Benchmark threads:     11
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      83759  1063   7668  81481  |     668469  1003   5680  57000
+23:      77952  1051   7556  79424  |     668191  1020   5666  57802
+24:      74313  1041   7678  79901  |     622159   971   5620  54590
+25:      70520  1023   7867  80518  |     620883   987   5600  55243
+22:      81520  1039   7636  79303  |     674740  1016   5665  57535
+23:      75239  1019   7522  76660  |     645024   988   5648  55798
+24:      74280  1045   7639  79867  |     659761  1029   5628  57890
+25:      70127  1016   7881  80069  |     627309  1000   5580  55814
+22:      81896  1038   7676  79669  |     614947   946   5542  52436
+23:      76741  1038   7533  78191  |     672578  1028   5659  58182
+24:      72197  1015   7645  77627  |     666792  1041   5618  58507
+25:      70818  1020   7925  80858  |     637288  1022   5548  56702
+----------------------------------  | ------------------------------
+Avr:     75780  1034   7685  79464  |     648178  1004   5621  56458
+Tot:            1019   6653  67961

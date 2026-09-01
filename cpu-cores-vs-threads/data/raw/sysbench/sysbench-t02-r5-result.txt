@@ -1,0 +1,38 @@
+Timestamp: 2026-08-29T03:18:03+00:00
+Threads: 2
+CPU affinity: 0-1
+Duration: 30 seconds
+Prime limit: 20000
+
+sysbench: /usr/pgsql-18/lib/libpq.so.5: no version information available (required by sysbench)
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Initializing random number generator from current time
+
+
+Prime numbers limit: 20000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  4589.67
+
+General statistics:
+    total time:                          30.0004s
+    total number of events:              137694
+
+Latency (ms):
+         min:                                    0.43
+         avg:                                    0.44
+         max:                                    0.55
+         95th percentile:                        0.44
+         sum:                                59989.76
+
+Threads fairness:
+    events (avg/stddev):           68847.0000/9.00
+    execution time (avg/stddev):   29.9949/0.00
+

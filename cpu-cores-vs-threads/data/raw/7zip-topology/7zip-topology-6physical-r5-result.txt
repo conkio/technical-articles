@@ -1,0 +1,44 @@
+Timestamp: 2026-08-29T05:48:08+00:00
+Benchmark: 7-Zip built-in benchmark
+Topology: 6physical
+Threads: 6
+CPU affinity: 0,1,2,3,4,5
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=6
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5110  5109  4945  4786  4930  4934  4971
+3T CPU Freq (MHz): 298% 4924   298% 4915  
+6T CPU Freq (MHz): 533% 4333   482% 3967  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:   6 / 12 : 03F
+RAM usage:   1334 MB (LP),  # Benchmark threads:      6
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      64851   561  11241  63088  |     450491   583   6590  38409
+23:      58486   550  10831  59590  |     441773   585   6538  38217
+24:      54595   543  10805  58701  |     458394   597   6737  40224
+25:      50172   519  11047  57285  |     450279   598   6696  40072
+22:      64692   560  11241  62932  |     475761   598   6787  40563
+23:      58369   549  10831  59471  |     469897   598   6798  40650
+24:      55205   547  10850  59357  |     460863   599   6756  40440
+25:      52082   535  11113  59466  |     450773   598   6712  40116
+22:      64139   558  11172  62395  |     475791   598   6783  40566
+23:      57734   545  10784  58824  |     469474   598   6793  40614
+24:      54875   546  10805  59002  |     460468   597   6770  40406
+25:      49296   510  11036  56285  |     436251   581   6681  38824
+----------------------------------  | ------------------------------
+Avr:     57041   544  10980  59700  |     458351   594   6720  39925
+Tot:             569   8850  49812

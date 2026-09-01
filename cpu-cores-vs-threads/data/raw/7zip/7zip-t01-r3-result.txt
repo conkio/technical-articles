@@ -1,0 +1,41 @@
+Timestamp: 2026-08-29T04:37:36+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 1
+CPU affinity: 0-0
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=1
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5085  5129  5128  4977  4954  4929  4930
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:   1 / 12 : 001
+RAM usage:    437 MB (LP),  # Benchmark threads:      1
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      13510   100  13196  13143  |      82970   100   7104   7084
+23:      10185   100  10385  10378  |      82483   100   7146   7140
+24:       8173   100   8798   8788  |      81720   100   7187   7174
+25:       7156   100   8185   8170  |      81112   100   7233   7220
+22:      13106   100  12780  12750  |      82980   100   7104   7085
+23:      10162   100  10385  10354  |      82099    99   7146   7107
+24:       7373   100   7966   7928  |      81529   100   7123   7157
+25:       7233   100   8275   8259  |      81074   100   7233   7216
+22:      13592   100  13196  13223  |      83006   100   7104   7087
+23:      10247    99  10515  10441  |      82517   100   7146   7143
+24:       8246   100   8887   8867  |      81688   100   7187   7171
+25:       7197   100   8239   8218  |      81035   100   7198   7213
+----------------------------------  | ------------------------------
+Avr:      9682   100  10067  10043  |      82018   100   7159   7150
+Tot:             100   8613   8596

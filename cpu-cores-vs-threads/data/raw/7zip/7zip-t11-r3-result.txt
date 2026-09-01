@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:51:49+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 11
+CPU affinity: 0-10
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=11
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5104  5129  5130  5128  5130  5012  4930
+5T CPU Freq (MHz): 494% 4860   500% 5067  
+11T CPU Freq (MHz): 1076% 5010   1084% 4987  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  11 / 12 : 7FF
+RAM usage:   2224 MB (LP),  # Benchmark threads:     11
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      82586  1043   7700  80340  |     669336  1008   5661  57074
+23:      76808  1051   7444  78259  |     640594   979   5663  55415
+24:      64226   955   7228  69056  |     591319   957   5420  51884
+25:      62147   949   7477  70957  |     602977   972   5520  53650
+22:      82458  1045   7676  80215  |     650065   984   5633  55431
+23:      76716  1039   7522  78165  |     664250  1014   5669  57461
+24:      73871  1041   7628  79427  |     660520  1031   5620  57956
+25:      69159  1019   7748  78964  |     630180  1000   5605  56070
+22:      80977  1024   7692  78775  |     659030   992   5665  56195
+23:      64137   891   7336  65349  |     649556   994   5651  56190
+24:      73712  1044   7590  79255  |     661023  1032   5620  58000
+25:      68946  1016   7750  78720  |     642667  1021   5598  57181
+----------------------------------  | ------------------------------
+Avr:     72978  1010   7566  76457  |     643460   999   5610  56042
+Tot:            1004   6588  66250

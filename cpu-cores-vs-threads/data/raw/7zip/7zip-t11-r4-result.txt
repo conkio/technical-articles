@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:55:42+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 11
+CPU affinity: 0-10
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=11
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5124  5107  5130  5130  5130  5130  5129
+5T CPU Freq (MHz): 500% 5019   496% 5052  
+11T CPU Freq (MHz): 1059% 4907   1065% 4899  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  11 / 12 : 7FF
+RAM usage:   2224 MB (LP),  # Benchmark threads:     11
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      81502  1038   7636  79285  |     667649  1002   5680  56930
+23:      76196  1037   7488  77635  |     645403   985   5669  55831
+24:      73055  1033   7601  78549  |     653059  1024   5593  57302
+25:      69520  1006   7889  79376  |     627179  1003   5566  55803
+22:      80723  1027   7644  78528  |     681983  1025   5671  58152
+23:      77482  1048   7533  78945  |     647489   990   5655  56011
+24:      73831  1039   7639  79383  |     603852   939   5641  52984
+25:      69464  1024   7742  79312  |     639268  1018   5589  56878
+22:      82794  1056   7628  80542  |     672956  1015   5655  57383
+23:      76778  1046   7477  78229  |     625521   956   5662  54111
+24:      73327  1033   7634  78842  |     639333   996   5630  56097
+25:      69059  1003   7862  78849  |     646092  1032   5571  57486
+----------------------------------  | ------------------------------
+Avr:     75311  1033   7648  78956  |     645815   999   5632  56247
+Tot:            1016   6640  67602

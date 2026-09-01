@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T05:20:38+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 11
+CPU affinity: 0-10
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=11
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5114  5110  5129  5127  5129  5127  5127
+5T CPU Freq (MHz): 496% 5028   499% 5079  
+11T CPU Freq (MHz): 1040% 4795   1068% 4902  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  11 / 12 : 7FF
+RAM usage:   2224 MB (LP),  # Benchmark threads:     11
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      81082  1033   7636  78877  |     658319   993   5650  56135
+23:      75646  1037   7433  77075  |     659583  1008   5659  57058
+24:      73286  1040   7579  78798  |     586096   913   5631  51426
+25:      66331  1002   7555  75734  |     638316  1017   5584  56794
+22:      78555  1020   7494  76419  |     672532  1014   5655  57347
+23:      77397  1048   7522  78859  |     672530  1029   5652  58178
+24:      73598  1037   7628  79133  |     635050   992   5620  55721
+25:      66040   999   7545  75402  |     623589   993   5585  55483
+22:      80659  1027   7644  78466  |     681379  1026   5663  58101
+23:      73048   997   7466  74428  |     637595   974   5660  55156
+24:      74008  1045   7617  79573  |     622406   970   5631  54612
+25:      63621   967   7515  72640  |     601547   955   5607  53522
+----------------------------------  | ------------------------------
+Avr:     73606  1021   7553  77117  |     640745   990   5633  55794
+Tot:            1006   6593  66456

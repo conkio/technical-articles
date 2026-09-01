@@ -1,0 +1,280 @@
+==================================================
+7-ZIP CPU TOPOLOGY COMPARISON
+Started: 2026-08-29T05:39:05+00:00
+Host: benchmark-server
+Kernel: 5.14.0-611.34.1.el9_7.x86_64
+
+6 physical cores:
+  CPUs 0,1,2,3,4,5
+
+3 physical cores + SMT:
+  CPUs 0,6,1,7,2,8
+
+Threads per benchmark: 6
+7-Zip internal iterations: 3
+Independent repetitions: 5
+Idle threshold: 94.0%
+Maximum idle-check attempts: 5
+==================================================
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=en_US.UTF-8 Threads:12 OPEN_MAX:4096
+
+Usage: 7z <command> [<switches>...] <archive_name> [<file_names>...] [@listfile]
+
+
+##################################################
+PASS 1
+##################################################
+
+==================================================
+Topology: 6physical
+7-Zip threads: 6
+CPU affinity: 0,1,2,3,4,5
+Pass: 1
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:39:05+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.20%
+Saved: raw/7zip-topology/7zip-topology-6physical-r1-pre-mpstat-attempt01-20260829_053905.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-6physical-r1-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:40:02+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip-topology/7zip-topology-6physical-r1-post-mpstat-attempt01-20260829_054002.txt
+Run validated and marked complete.
+
+==================================================
+Topology: 3physical-smt
+7-Zip threads: 6
+CPU affinity: 0,6,1,7,2,8
+Pass: 1
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:40:07+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r1-pre-mpstat-attempt01-20260829_054007.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-3physical-smt-r1-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:41:14+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r1-post-mpstat-attempt01-20260829_054114.txt
+Run validated and marked complete.
+
+##################################################
+PASS 2
+##################################################
+
+==================================================
+Topology: 3physical-smt
+7-Zip threads: 6
+CPU affinity: 0,6,1,7,2,8
+Pass: 2
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:41:19+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r2-pre-mpstat-attempt01-20260829_054119.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-3physical-smt-r2-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:42:25+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r2-post-mpstat-attempt01-20260829_054225.txt
+Run validated and marked complete.
+
+==================================================
+Topology: 6physical
+7-Zip threads: 6
+CPU affinity: 0,1,2,3,4,5
+Pass: 2
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:42:30+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.80%
+Saved: raw/7zip-topology/7zip-topology-6physical-r2-pre-mpstat-attempt01-20260829_054230.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-6physical-r2-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:43:28+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip-topology/7zip-topology-6physical-r2-post-mpstat-attempt01-20260829_054328.txt
+Run validated and marked complete.
+
+##################################################
+PASS 3
+##################################################
+
+==================================================
+Topology: 6physical
+7-Zip threads: 6
+CPU affinity: 0,1,2,3,4,5
+Pass: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:43:33+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip-topology/7zip-topology-6physical-r3-pre-mpstat-attempt01-20260829_054333.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-6physical-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:44:31+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.40%
+Saved: raw/7zip-topology/7zip-topology-6physical-r3-post-mpstat-attempt01-20260829_054431.txt
+Run validated and marked complete.
+
+==================================================
+Topology: 3physical-smt
+7-Zip threads: 6
+CPU affinity: 0,6,1,7,2,8
+Pass: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:44:36+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 95.59%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r3-pre-mpstat-attempt01-20260829_054436.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-3physical-smt-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:45:43+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r3-post-mpstat-attempt01-20260829_054543.txt
+Run validated and marked complete.
+
+##################################################
+PASS 4
+##################################################
+
+==================================================
+Topology: 3physical-smt
+7-Zip threads: 6
+CPU affinity: 0,6,1,7,2,8
+Pass: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:45:48+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r4-pre-mpstat-attempt01-20260829_054548.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-3physical-smt-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:46:55+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 96.80%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r4-post-mpstat-attempt01-20260829_054655.txt
+Run validated and marked complete.
+
+==================================================
+Topology: 6physical
+7-Zip threads: 6
+CPU affinity: 0,1,2,3,4,5
+Pass: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:47:00+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 96.79%
+Saved: raw/7zip-topology/7zip-topology-6physical-r4-pre-mpstat-attempt01-20260829_054700.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-6physical-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:47:58+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 96.59%
+Saved: raw/7zip-topology/7zip-topology-6physical-r4-post-mpstat-attempt01-20260829_054758.txt
+Run validated and marked complete.
+
+##################################################
+PASS 5
+##################################################
+
+==================================================
+Topology: 6physical
+7-Zip threads: 6
+CPU affinity: 0,1,2,3,4,5
+Pass: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:48:03+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip-topology/7zip-topology-6physical-r5-pre-mpstat-attempt01-20260829_054803.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-6physical-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:49:01+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.20%
+Saved: raw/7zip-topology/7zip-topology-6physical-r5-post-mpstat-attempt01-20260829_054901.txt
+Run validated and marked complete.
+
+==================================================
+Topology: 3physical-smt
+7-Zip threads: 6
+CPU affinity: 0,6,1,7,2,8
+Pass: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/5
+Time: 2026-08-29T05:49:06+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.20%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r5-pre-mpstat-attempt01-20260829_054906.txt
+Benchmark completed: raw/7zip-topology/7zip-topology-3physical-smt-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/5
+Time: 2026-08-29T05:50:13+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.60%
+Saved: raw/7zip-topology/7zip-topology-3physical-smt-r5-post-mpstat-attempt01-20260829_055013.txt
+Run validated and marked complete.
+
+==================================================
+ALL 7-ZIP TOPOLOGY RUNS COMPLETED
+Completed: 2026-08-29T05:50:18+00:00
+==================================================

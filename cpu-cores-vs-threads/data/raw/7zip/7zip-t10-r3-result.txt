@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:50:36+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 10
+CPU affinity: 0-9
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=10
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  4970  4921  4925  4930  4930  4945  4915
+5T CPU Freq (MHz): 486% 4833   496% 5076  
+10T CPU Freq (MHz): 987% 5051   981% 4987  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  10 / 12 : 3FF
+RAM usage:   2224 MB (LP),  # Benchmark threads:     10
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      78087   921   8248  75963  |     653448   953   5846  55728
+23:      69439   885   7996  70751  |     642293   957   5809  55568
+24:      68866   917   8075  74045  |     630393   956   5784  55316
+25:      66160   885   8531  75539  |     619167   956   5762  55094
+22:      74971   905   8061  72933  |     652750   956   5824  55668
+23:      70872   905   7981  72210  |     642744   962   5778  55608
+24:      69089   906   8195  74285  |     630855   955   5794  55357
+25:      66802   895   8520  76272  |     618554   957   5753  55040
+22:      77412   919   8192  75307  |     650714   952   5830  55495
+23:      72766   927   7996  74140  |     642704   955   5821  55604
+24:      67338   888   8157  72402  |     631370   956   5794  55402
+25:      66307   885   8551  75707  |     607527   942   5740  54059
+----------------------------------  | ------------------------------
+Avr:     70676   903   8209  74130  |     635210   955   5795  55328
+Tot:             929   7002  64729

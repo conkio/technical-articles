@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T05:10:54+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 3
+CPU affinity: 0-2
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=3
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5102  5129  4963  4931  4930  4890  4928
+1T CPU Freq (MHz): 101% 4930    98% 4910  
+3T CPU Freq (MHz): 302% 4916   299% 4894  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:   3 / 12 : 007
+RAM usage:    444 MB (LP),  # Benchmark threads:      3
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      36744   289  12388  35745  |     222260   271   7003  18962
+23:      33202   288  11765  33829  |     233806   290   6984  20231
+24:      31663   292  11673  34045  |     235801   295   7010  20693
+25:      31039   293  12112  35440  |     218498   278   6999  19446
+22:      36056   283  12388  35075  |     241571   294   7003  20609
+23:      32951   293  11445  33574  |     240152   296   7019  20780
+24:      31370   290  11635  33730  |     230808   289   7010  20255
+25:      30195   282  12230  34476  |     221347   282   6982  19700
+22:      37055   289  12452  36048  |     233285   285   6975  19902
+23:      32433   283  11683  33046  |     234218   289   7019  20267
+24:      31225   290  11597  33574  |     230583   288   7026  20235
+25:      30981   292  12112  35374  |     218592   277   7016  19455
+----------------------------------  | ------------------------------
+Avr:     32910   289  11957  34496  |     230077   286   7004  20045
+Tot:             287   9480  27270

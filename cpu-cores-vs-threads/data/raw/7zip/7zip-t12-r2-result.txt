@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T04:23:03+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 12
+CPU affinity: 0-11
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=12
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  4965  4930  4931  4930  4929  4928  4906
+6T CPU Freq (MHz): 593% 5021   598% 5101  
+12T CPU Freq (MHz): 1105% 4696   1140% 4806  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  12
+RAM usage:   2669 MB (LP),  # Benchmark threads:     12
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      85842  1113   7502  83508  |     765324  1180   5528  65259
+23:      78951  1098   7325  80442  |     751862  1183   5498  65040
+24:      75883  1095   7451  81590  |     727320  1168   5463  63818
+25:      72558  1068   7756  82845  |     721092  1181   5431  64159
+22:      85711  1114   7486  83380  |     764009  1183   5507  65147
+23:      79007  1096   7347  80499  |     746188  1175   5492  64549
+24:      76394  1098   7483  82139  |     737289  1185   5460  64692
+25:      73251  1079   7750  83636  |     722430  1183   5435  64278
+22:      85312  1118   7425  82992  |     767091  1187   5509  65410
+23:      79442  1107   7315  80943  |     754978  1189   5492  65310
+24:      76931  1107   7472  82717  |     735610  1181   5465  64545
+25:      72703  1066   7788  83009  |     699835  1147   5430  62267
+----------------------------------  | ------------------------------
+Avr:     78499  1096   7508  82308  |     741086  1179   5476  64539
+Tot:            1138   6492  73424

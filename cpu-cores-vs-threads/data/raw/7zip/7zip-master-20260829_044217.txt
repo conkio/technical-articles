@@ -1,0 +1,1046 @@
+==================================================
+7-ZIP CPU SCALING BENCHMARK
+Started: 2026-08-29T04:42:17+00:00
+Host: benchmark-server
+Kernel: 5.14.0-611.34.1.el9_7.x86_64
+
+Thread counts: 1 through 12
+7-Zip internal iterations: 3
+Independent repetitions: 5
+Idle threshold: 94.0%
+Idle-check retries: 5
+Retry interval: 15 seconds
+==================================================
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=en_US.UTF-8 Threads:12 OPEN_MAX:4096
+
+Usage: 7z <command> [<switches>...] <archive_name> [<file_names>...] [@listfile]
+
+
+##################################################
+PASS 1
+##################################################
+
+==================================================
+7-Zip benchmark
+Threads: 1
+CPU affinity: 0-0
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 2
+CPU affinity: 0-1
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 3
+CPU affinity: 0-2
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 4
+CPU affinity: 0-3
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 5
+CPU affinity: 0-4
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 6
+CPU affinity: 0-5
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 7
+CPU affinity: 0-6
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 8
+CPU affinity: 0-7
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 9
+CPU affinity: 0-8
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 10
+CPU affinity: 0-9
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 11
+CPU affinity: 0-10
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 12
+CPU affinity: 0-11
+Repetition: 1
+==================================================
+Already completed - skipping.
+
+##################################################
+PASS 2
+##################################################
+
+==================================================
+7-Zip benchmark
+Threads: 12
+CPU affinity: 0-11
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 11
+CPU affinity: 0-10
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 10
+CPU affinity: 0-9
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 9
+CPU affinity: 0-8
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 8
+CPU affinity: 0-7
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 7
+CPU affinity: 0-6
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 6
+CPU affinity: 0-5
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 5
+CPU affinity: 0-4
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 4
+CPU affinity: 0-3
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 3
+CPU affinity: 0-2
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 2
+CPU affinity: 0-1
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 1
+CPU affinity: 0-0
+Repetition: 2
+==================================================
+Already completed - skipping.
+
+##################################################
+PASS 3
+##################################################
+
+==================================================
+7-Zip benchmark
+Threads: 1
+CPU affinity: 0-0
+Repetition: 3
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 2
+CPU affinity: 0-1
+Repetition: 3
+==================================================
+Already completed - skipping.
+
+==================================================
+7-Zip benchmark
+Threads: 3
+CPU affinity: 0-2
+Repetition: 3
+==================================================
+Previous unvalidated result archived:
+raw/7zip/incomplete/7zip-t03-r3-result-20260829_044217.txt
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:42:17+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.80%
+Saved: raw/7zip/7zip-t03-r3-pre-mpstat-attempt01-20260829_044217.txt
+Benchmark completed: raw/7zip/7zip-t03-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:43:28+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.61%
+Saved: raw/7zip/7zip-t03-r3-post-mpstat-attempt01-20260829_044328.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 4
+CPU affinity: 0-3
+Repetition: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:43:33+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.40%
+Saved: raw/7zip/7zip-t04-r3-pre-mpstat-attempt01-20260829_044333.txt
+Benchmark completed: raw/7zip/7zip-t04-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:44:29+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t04-r3-post-mpstat-attempt01-20260829_044429.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 5
+CPU affinity: 0-4
+Repetition: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:44:34+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.20%
+Saved: raw/7zip/7zip-t05-r3-pre-mpstat-attempt01-20260829_044434.txt
+Benchmark completed: raw/7zip/7zip-t05-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:45:41+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t05-r3-post-mpstat-attempt01-20260829_044541.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 6
+CPU affinity: 0-5
+Repetition: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:45:46+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t06-r3-pre-mpstat-attempt01-20260829_044546.txt
+Benchmark completed: raw/7zip/7zip-t06-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:46:47+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t06-r3-post-mpstat-attempt01-20260829_044647.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 7
+CPU affinity: 0-6
+Repetition: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:46:52+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t07-r3-pre-mpstat-attempt01-20260829_044652.txt
+Benchmark completed: raw/7zip/7zip-t07-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:47:59+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.39%
+Saved: raw/7zip/7zip-t07-r3-post-mpstat-attempt01-20260829_044759.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 8
+CPU affinity: 0-7
+Repetition: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:48:04+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t08-r3-pre-mpstat-attempt01-20260829_044804.txt
+Benchmark completed: raw/7zip/7zip-t08-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:49:10+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.00%
+Saved: raw/7zip/7zip-t08-r3-post-mpstat-attempt01-20260829_044910.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 9
+CPU affinity: 0-8
+Repetition: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:49:15+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t09-r3-pre-mpstat-attempt01-20260829_044915.txt
+Benchmark completed: raw/7zip/7zip-t09-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:50:26+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.80%
+Saved: raw/7zip/7zip-t09-r3-post-mpstat-attempt01-20260829_045026.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 10
+CPU affinity: 0-9
+Repetition: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:50:31+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t10-r3-pre-mpstat-attempt01-20260829_045031.txt
+Benchmark completed: raw/7zip/7zip-t10-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:51:39+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.20%
+Saved: raw/7zip/7zip-t10-r3-post-mpstat-attempt01-20260829_045139.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 11
+CPU affinity: 0-10
+Repetition: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:51:44+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t11-r3-pre-mpstat-attempt01-20260829_045144.txt
+Benchmark completed: raw/7zip/7zip-t11-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:53:01+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 96.41%
+Saved: raw/7zip/7zip-t11-r3-post-mpstat-attempt01-20260829_045301.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 12
+CPU affinity: 0-11
+Repetition: 3
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:53:06+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.40%
+Saved: raw/7zip/7zip-t12-r3-pre-mpstat-attempt01-20260829_045306.txt
+Benchmark completed: raw/7zip/7zip-t12-r3-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:54:16+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t12-r3-post-mpstat-attempt01-20260829_045416.txt
+Run validated and marked complete.
+
+##################################################
+PASS 4
+##################################################
+
+==================================================
+7-Zip benchmark
+Threads: 12
+CPU affinity: 0-11
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:54:21+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 96.21%
+Saved: raw/7zip/7zip-t12-r4-pre-mpstat-attempt01-20260829_045421.txt
+Benchmark completed: raw/7zip/7zip-t12-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:55:32+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t12-r4-post-mpstat-attempt01-20260829_045532.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 11
+CPU affinity: 0-10
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:55:37+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t11-r4-pre-mpstat-attempt01-20260829_045537.txt
+Benchmark completed: raw/7zip/7zip-t11-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:56:54+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.40%
+Saved: raw/7zip/7zip-t11-r4-post-mpstat-attempt01-20260829_045654.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 10
+CPU affinity: 0-9
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:56:59+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 96.00%
+Saved: raw/7zip/7zip-t10-r4-pre-mpstat-attempt01-20260829_045659.txt
+Benchmark completed: raw/7zip/7zip-t10-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:58:07+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.40%
+Saved: raw/7zip/7zip-t10-r4-post-mpstat-attempt01-20260829_045807.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 9
+CPU affinity: 0-8
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:58:12+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.40%
+Saved: raw/7zip/7zip-t09-r4-pre-mpstat-attempt01-20260829_045812.txt
+Benchmark completed: raw/7zip/7zip-t09-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T04:59:23+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.59%
+Saved: raw/7zip/7zip-t09-r4-post-mpstat-attempt01-20260829_045923.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 8
+CPU affinity: 0-7
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T04:59:28+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t08-r4-pre-mpstat-attempt01-20260829_045928.txt
+Benchmark completed: raw/7zip/7zip-t08-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:00:34+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t08-r4-post-mpstat-attempt01-20260829_050034.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 7
+CPU affinity: 0-6
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:00:39+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t07-r4-pre-mpstat-attempt01-20260829_050039.txt
+Benchmark completed: raw/7zip/7zip-t07-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:01:46+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t07-r4-post-mpstat-attempt01-20260829_050146.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 6
+CPU affinity: 0-5
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:01:51+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.19%
+Saved: raw/7zip/7zip-t06-r4-pre-mpstat-attempt01-20260829_050151.txt
+Benchmark completed: raw/7zip/7zip-t06-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:02:49+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.20%
+Saved: raw/7zip/7zip-t06-r4-post-mpstat-attempt01-20260829_050249.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 5
+CPU affinity: 0-4
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:02:54+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t05-r4-pre-mpstat-attempt01-20260829_050254.txt
+Benchmark completed: raw/7zip/7zip-t05-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:04:01+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.20%
+Saved: raw/7zip/7zip-t05-r4-post-mpstat-attempt01-20260829_050401.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 4
+CPU affinity: 0-3
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:04:06+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.40%
+Saved: raw/7zip/7zip-t04-r4-pre-mpstat-attempt01-20260829_050406.txt
+Benchmark completed: raw/7zip/7zip-t04-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:05:02+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t04-r4-post-mpstat-attempt01-20260829_050502.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 3
+CPU affinity: 0-2
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:05:07+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t03-r4-pre-mpstat-attempt01-20260829_050507.txt
+Benchmark completed: raw/7zip/7zip-t03-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:06:18+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t03-r4-post-mpstat-attempt01-20260829_050618.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 2
+CPU affinity: 0-1
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:06:23+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t02-r4-pre-mpstat-attempt01-20260829_050623.txt
+Benchmark completed: raw/7zip/7zip-t02-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:07:17+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t02-r4-post-mpstat-attempt01-20260829_050717.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 1
+CPU affinity: 0-0
+Repetition: 4
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:07:22+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t01-r4-pre-mpstat-attempt01-20260829_050722.txt
+Benchmark completed: raw/7zip/7zip-t01-r4-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:08:30+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.20%
+Saved: raw/7zip/7zip-t01-r4-post-mpstat-attempt01-20260829_050830.txt
+Run validated and marked complete.
+
+##################################################
+PASS 5
+##################################################
+
+==================================================
+7-Zip benchmark
+Threads: 1
+CPU affinity: 0-0
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:08:35+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t01-r5-pre-mpstat-attempt01-20260829_050835.txt
+Benchmark completed: raw/7zip/7zip-t01-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:09:44+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t01-r5-post-mpstat-attempt01-20260829_050944.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 2
+CPU affinity: 0-1
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:09:49+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.40%
+Saved: raw/7zip/7zip-t02-r5-pre-mpstat-attempt01-20260829_050949.txt
+Benchmark completed: raw/7zip/7zip-t02-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:10:44+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t02-r5-post-mpstat-attempt01-20260829_051044.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 3
+CPU affinity: 0-2
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:10:49+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t03-r5-pre-mpstat-attempt01-20260829_051049.txt
+Benchmark completed: raw/7zip/7zip-t03-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:11:58+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 96.81%
+Saved: raw/7zip/7zip-t03-r5-post-mpstat-attempt01-20260829_051158.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 4
+CPU affinity: 0-3
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:12:03+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t04-r5-pre-mpstat-attempt01-20260829_051203.txt
+Benchmark completed: raw/7zip/7zip-t04-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:12:59+00:00
+CPU check FAILED.
+Minimum logical CPU idle: 89.42%
+Required minimum: 94.0%
+Saved: raw/7zip/7zip-t04-r5-post-mpstat-attempt01-20260829_051259.txt
+Waiting 15 seconds before retry...
+
+CPU idle check: post
+Attempt: 2/6
+Time: 2026-08-29T05:13:19+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.20%
+Saved: raw/7zip/7zip-t04-r5-post-mpstat-attempt02-20260829_051319.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 5
+CPU affinity: 0-4
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:13:24+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.81%
+Saved: raw/7zip/7zip-t05-r5-pre-mpstat-attempt01-20260829_051324.txt
+Benchmark completed: raw/7zip/7zip-t05-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:14:32+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t05-r5-post-mpstat-attempt01-20260829_051432.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 6
+CPU affinity: 0-5
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:14:37+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.20%
+Saved: raw/7zip/7zip-t06-r5-pre-mpstat-attempt01-20260829_051437.txt
+Benchmark completed: raw/7zip/7zip-t06-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:15:35+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.40%
+Saved: raw/7zip/7zip-t06-r5-post-mpstat-attempt01-20260829_051535.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 7
+CPU affinity: 0-6
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:15:40+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t07-r5-pre-mpstat-attempt01-20260829_051540.txt
+Benchmark completed: raw/7zip/7zip-t07-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:16:48+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.00%
+Saved: raw/7zip/7zip-t07-r5-post-mpstat-attempt01-20260829_051648.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 8
+CPU affinity: 0-7
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:16:53+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.00%
+Saved: raw/7zip/7zip-t08-r5-pre-mpstat-attempt01-20260829_051653.txt
+Benchmark completed: raw/7zip/7zip-t08-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:17:58+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 95.80%
+Saved: raw/7zip/7zip-t08-r5-post-mpstat-attempt01-20260829_051758.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 9
+CPU affinity: 0-8
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:18:03+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t09-r5-pre-mpstat-attempt01-20260829_051803.txt
+Benchmark completed: raw/7zip/7zip-t09-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:19:15+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t09-r5-post-mpstat-attempt01-20260829_051915.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 10
+CPU affinity: 0-9
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:19:20+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.59%
+Saved: raw/7zip/7zip-t10-r5-pre-mpstat-attempt01-20260829_051920.txt
+Benchmark completed: raw/7zip/7zip-t10-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:20:28+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.20%
+Saved: raw/7zip/7zip-t10-r5-post-mpstat-attempt01-20260829_052028.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 11
+CPU affinity: 0-10
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:20:33+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.80%
+Saved: raw/7zip/7zip-t11-r5-pre-mpstat-attempt01-20260829_052033.txt
+Benchmark completed: raw/7zip/7zip-t11-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:21:50+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 98.60%
+Saved: raw/7zip/7zip-t11-r5-post-mpstat-attempt01-20260829_052150.txt
+Run validated and marked complete.
+
+==================================================
+7-Zip benchmark
+Threads: 12
+CPU affinity: 0-11
+Repetition: 5
+==================================================
+
+CPU idle check: pre
+Attempt: 1/6
+Time: 2026-08-29T05:21:55+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 97.39%
+Saved: raw/7zip/7zip-t12-r5-pre-mpstat-attempt01-20260829_052155.txt
+Benchmark completed: raw/7zip/7zip-t12-r5-result.txt
+
+CPU idle check: post
+Attempt: 1/6
+Time: 2026-08-29T05:23:06+00:00
+CPU check PASSED.
+Minimum logical CPU idle: 99.00%
+Saved: raw/7zip/7zip-t12-r5-post-mpstat-attempt01-20260829_052306.txt
+Run validated and marked complete.
+
+==================================================
+ALL 7-ZIP BENCHMARK RUNS COMPLETED
+Completed: 2026-08-29T05:23:11+00:00
+==================================================

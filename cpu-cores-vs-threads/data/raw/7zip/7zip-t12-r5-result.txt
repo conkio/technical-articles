@@ -1,0 +1,43 @@
+Timestamp: 2026-08-29T05:22:00+00:00
+Benchmark: 7-Zip built-in benchmark
+Threads requested: 12
+CPU affinity: 0-11
+7-Zip internal iterations: 3
+
+
+7-Zip 26.02 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:4096
+
+ mt=12
+Compiler:  ver:11.5.0 20240719 (Red Hat 11.5.0-14) GCC 11.5.0 : SSE2
+Linux : 5.14.0-611.34.1.el9_7.x86_64 : #1 SMP PREEMPT_DYNAMIC Wed Feb 18 05:51:10 EST 2026 : x86_64
+PageSize:4KB HPS:2MB THPS:2MB THP:always hwcap:2 hwcap2:2
+AMD EPYC 4244P 6-Core Processor
+(A60F12)  (LP)
+
+1T CPU Freq (MHz):  5108  5044  4929  4930  4928  4925  5125
+6T CPU Freq (MHz): 586% 4684   596% 5042  
+12T CPU Freq (MHz): 1195% 5035   1147% 4835  
+
+RAM size:   63651 MB (LP),  # CPU hardware threads:  12
+RAM usage:   2669 MB (LP),  # Benchmark threads:     12
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      85924  1111   7525  83587  |     761782  1176   5522  64957
+23:      77834  1092   7262  79304  |     746941  1176   5497  64615
+24:      76262  1099   7462  81998  |     721449  1158   5465  63302
+25:      67378  1044   7370  76930  |     687364  1128   5423  61158
+22:      84895  1111   7433  82587  |     766262  1187   5504  65339
+23:      78030  1079   7368  79504  |     749873  1181   5494  64868
+24:      76604  1101   7483  82365  |     734692  1179   5466  64464
+25:      66823  1032   7396  76297  |     715490  1172   5431  63660
+22:      85648  1115   7471  83319  |     764613  1184   5509  65198
+23:      78730  1092   7347  80217  |     755214  1189   5492  65330
+24:      76807  1104   7483  82583  |     736761  1184   5460  64646
+25:      67945  1040   7457  77578  |     722762  1184   5433  64307
+----------------------------------  | ------------------------------
+Avr:     76907  1085   7421  80522  |     738600  1175   5475  64320
+Tot:            1130   6448  72421

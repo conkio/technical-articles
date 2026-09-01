@@ -1,0 +1,986 @@
+==================================================
+SYSBENCH CPU BENCHMARK
+Started: 2026-08-29T03:01:07+00:00
+Host: benchmark-server
+Kernel: 5.14.0-611.34.1.el9_7.x86_64
+Idle threshold: 94.0%
+Maximum CPU check attempts: 5
+Retry interval: 15 seconds
+==================================================
+sysbench: /usr/pgsql-18/lib/libpq.so.5: no version information available (required by sysbench)
+sysbench 1.0.20
+
+
+===== PASS 1 =====
+
+--------------------------------------------
+Threads: 1
+CPU affinity: 0-0
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 2
+CPU affinity: 0-1
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 3
+CPU affinity: 0-2
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 4
+CPU affinity: 0-3
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 5
+CPU affinity: 0-4
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 6
+CPU affinity: 0-5
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 7
+CPU affinity: 0-6
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 8
+CPU affinity: 0-7
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 9
+CPU affinity: 0-8
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 10
+CPU affinity: 0-9
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 11
+CPU affinity: 0-10
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 12
+CPU affinity: 0-11
+Repetition: 1
+--------------------------------------------
+Already completed - skipping.
+
+===== PASS 2 =====
+
+--------------------------------------------
+Threads: 12
+CPU affinity: 0-11
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 11
+CPU affinity: 0-10
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 10
+CPU affinity: 0-9
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 9
+CPU affinity: 0-8
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 8
+CPU affinity: 0-7
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 7
+CPU affinity: 0-6
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 6
+CPU affinity: 0-5
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 5
+CPU affinity: 0-4
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 4
+CPU affinity: 0-3
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 3
+CPU affinity: 0-2
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 2
+CPU affinity: 0-1
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 1
+CPU affinity: 0-0
+Repetition: 2
+--------------------------------------------
+Already completed - skipping.
+
+===== PASS 3 =====
+
+--------------------------------------------
+Threads: 1
+CPU affinity: 0-0
+Repetition: 3
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 2
+CPU affinity: 0-1
+Repetition: 3
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 3
+CPU affinity: 0-2
+Repetition: 3
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 4
+CPU affinity: 0-3
+Repetition: 3
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 5
+CPU affinity: 0-4
+Repetition: 3
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 6
+CPU affinity: 0-5
+Repetition: 3
+--------------------------------------------
+Already completed - skipping.
+
+--------------------------------------------
+Threads: 7
+CPU affinity: 0-6
+Repetition: 3
+--------------------------------------------
+Previous unvalidated result archived:
+raw/incomplete/sysbench-t07-r3-result-20260829_030107.txt
+Starting/resuming this configuration.
+Time: 2026-08-29T03:01:07+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:01:07+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t07-r3-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t07-r3-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:01:52+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.40%
+Saved: raw/sysbench-t07-r3-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 8
+CPU affinity: 0-7
+Repetition: 3
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:01:57+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:01:57+00:00
+CPU check passed.
+Minimum logical CPU idle: 96.79%
+Saved: raw/sysbench-t08-r3-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t08-r3-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:02:42+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.80%
+Saved: raw/sysbench-t08-r3-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 9
+CPU affinity: 0-8
+Repetition: 3
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:02:47+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:02:47+00:00
+CPU check passed.
+Minimum logical CPU idle: 96.60%
+Saved: raw/sysbench-t09-r3-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t09-r3-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:03:32+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.80%
+Saved: raw/sysbench-t09-r3-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 10
+CPU affinity: 0-9
+Repetition: 3
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:03:37+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:03:37+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t10-r3-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t10-r3-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:04:22+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t10-r3-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 11
+CPU affinity: 0-10
+Repetition: 3
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:04:27+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:04:27+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.80%
+Saved: raw/sysbench-t11-r3-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t11-r3-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:05:12+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t11-r3-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 12
+CPU affinity: 0-11
+Repetition: 3
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:05:17+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:05:17+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.40%
+Saved: raw/sysbench-t12-r3-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t12-r3-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:06:02+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.20%
+Saved: raw/sysbench-t12-r3-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+===== PASS 4 =====
+
+--------------------------------------------
+Threads: 12
+CPU affinity: 0-11
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:06:07+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:06:07+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t12-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t12-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:06:52+00:00
+CPU check failed.
+Minimum logical CPU idle: 86.12%
+Required minimum: 94.0%
+Saved: raw/sysbench-t12-r4-post-mpstat-attempt01.txt
+Waiting 15 seconds before retry...
+
+CPU idle check: post
+Attempt 2/5
+Time: 2026-08-29T03:07:12+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t12-r4-post-mpstat-attempt02.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 11
+CPU affinity: 0-10
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:07:17+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:07:17+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t11-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t11-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:08:02+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.00%
+Saved: raw/sysbench-t11-r4-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 10
+CPU affinity: 0-9
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:08:07+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:08:07+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.20%
+Saved: raw/sysbench-t10-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t10-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:08:52+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.00%
+Saved: raw/sysbench-t10-r4-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 9
+CPU affinity: 0-8
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:08:57+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:08:57+00:00
+CPU check passed.
+Minimum logical CPU idle: 96.80%
+Saved: raw/sysbench-t09-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t09-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:09:42+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.40%
+Saved: raw/sysbench-t09-r4-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 8
+CPU affinity: 0-7
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:09:47+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:09:47+00:00
+CPU check passed.
+Minimum logical CPU idle: 97.01%
+Saved: raw/sysbench-t08-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t08-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:10:33+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.00%
+Saved: raw/sysbench-t08-r4-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 7
+CPU affinity: 0-6
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:10:38+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:10:38+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.80%
+Saved: raw/sysbench-t07-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t07-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:11:23+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t07-r4-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 6
+CPU affinity: 0-5
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:11:28+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:11:28+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.20%
+Saved: raw/sysbench-t06-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t06-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:12:13+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t06-r4-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 5
+CPU affinity: 0-4
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:12:18+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:12:18+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t05-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t05-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:13:03+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t05-r4-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 4
+CPU affinity: 0-3
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:13:08+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:13:08+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t04-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t04-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:13:53+00:00
+CPU check failed.
+Minimum logical CPU idle: 81.73%
+Required minimum: 94.0%
+Saved: raw/sysbench-t04-r4-post-mpstat-attempt01.txt
+Waiting 15 seconds before retry...
+
+CPU idle check: post
+Attempt 2/5
+Time: 2026-08-29T03:14:13+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t04-r4-post-mpstat-attempt02.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 3
+CPU affinity: 0-2
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:14:18+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:14:18+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t03-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t03-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:15:03+00:00
+CPU check failed.
+Minimum logical CPU idle: 93.17%
+Required minimum: 94.0%
+Saved: raw/sysbench-t03-r4-post-mpstat-attempt01.txt
+Waiting 15 seconds before retry...
+
+CPU idle check: post
+Attempt 2/5
+Time: 2026-08-29T03:15:23+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.20%
+Saved: raw/sysbench-t03-r4-post-mpstat-attempt02.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 2
+CPU affinity: 0-1
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:15:28+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:15:28+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t02-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t02-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:16:13+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.80%
+Saved: raw/sysbench-t02-r4-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 1
+CPU affinity: 0-0
+Repetition: 4
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:16:18+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:16:18+00:00
+CPU check passed.
+Minimum logical CPU idle: 97.61%
+Saved: raw/sysbench-t01-r4-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t01-r4-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:17:03+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t01-r4-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+===== PASS 5 =====
+
+--------------------------------------------
+Threads: 1
+CPU affinity: 0-0
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:17:08+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:17:08+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.20%
+Saved: raw/sysbench-t01-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t01-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:17:53+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t01-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 2
+CPU affinity: 0-1
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:17:58+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:17:58+00:00
+CPU check passed.
+Minimum logical CPU idle: 97.19%
+Saved: raw/sysbench-t02-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t02-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:18:43+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t02-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 3
+CPU affinity: 0-2
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:18:48+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:18:48+00:00
+CPU check passed.
+Minimum logical CPU idle: 97.20%
+Saved: raw/sysbench-t03-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t03-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:19:33+00:00
+CPU check passed.
+Minimum logical CPU idle: 97.80%
+Saved: raw/sysbench-t03-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 4
+CPU affinity: 0-3
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:19:38+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:19:38+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t04-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t04-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:20:23+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t04-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 5
+CPU affinity: 0-4
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:20:28+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:20:28+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.40%
+Saved: raw/sysbench-t05-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t05-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:21:13+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.20%
+Saved: raw/sysbench-t05-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 6
+CPU affinity: 0-5
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:21:18+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:21:18+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.80%
+Saved: raw/sysbench-t06-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t06-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:22:03+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t06-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 7
+CPU affinity: 0-6
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:22:08+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:22:08+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t07-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t07-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:22:53+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.20%
+Saved: raw/sysbench-t07-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 8
+CPU affinity: 0-7
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:22:58+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:22:58+00:00
+CPU check passed.
+Minimum logical CPU idle: 97.20%
+Saved: raw/sysbench-t08-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t08-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:23:43+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.81%
+Saved: raw/sysbench-t08-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 9
+CPU affinity: 0-8
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:23:48+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:23:48+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.80%
+Saved: raw/sysbench-t09-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t09-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:24:33+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.80%
+Saved: raw/sysbench-t09-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 10
+CPU affinity: 0-9
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:24:38+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:24:38+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.00%
+Saved: raw/sysbench-t10-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t10-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:25:23+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.20%
+Saved: raw/sysbench-t10-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 11
+CPU affinity: 0-10
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:25:28+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:25:28+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t11-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t11-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:26:13+00:00
+CPU check passed.
+Minimum logical CPU idle: 99.20%
+Saved: raw/sysbench-t11-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+--------------------------------------------
+Threads: 12
+CPU affinity: 0-11
+Repetition: 5
+--------------------------------------------
+Starting/resuming this configuration.
+Time: 2026-08-29T03:26:18+00:00
+
+CPU idle check: pre
+Attempt 1/5
+Time: 2026-08-29T03:26:18+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.60%
+Saved: raw/sysbench-t12-r5-pre-mpstat-attempt01.txt
+Benchmark completed: raw/sysbench-t12-r5-result.txt
+
+CPU idle check: post
+Attempt 1/5
+Time: 2026-08-29T03:27:03+00:00
+CPU check passed.
+Minimum logical CPU idle: 98.80%
+Saved: raw/sysbench-t12-r5-post-mpstat-attempt01.txt
+Run validated and marked complete.
+
+==================================================
+ALL SYSBENCH RUNS COMPLETED
+Completed: 2026-08-29T03:27:08+00:00
+==================================================
