@@ -1,5 +1,8 @@
 # Broadband vs Ethernet: How They Differ and Work Together
 
+**By Constantin Kioulafas**  
+*Originally written: February 2022 · Revised: August 2026*
+
 Broadband has come to mean always on, high-speed, high-capacity / wide-bandwidth access to the Internet. Broadband access can be achieved over a number of connection media, such as coaxial cable, satellite, wireless, copper wire, and fiber-optic cable.
 
 Almost all Internet subscriber connections today are implemented over a broadband connection.

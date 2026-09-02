@@ -24,3 +24,12 @@ networks, and first-mile access technologies.
 
 [Read article](broadband-vs-ethernet/article/) ·
 [PDF](broadband-vs-ethernet/article/broadband-vs-ethernet.pdf)
+
+### Thermal Throttling: How It Works, What Causes It, and How to Prevent It
+
+An explanation of how thermal throttling protects CPUs and GPUs
+from excessive heat, including thermal limits, clock speed and voltage
+reduction, performance effects, cooling, airflow, and overclocking.
+
+[Read article](thermal-throttling/article/) ·
+[PDF](thermal-throttling/article/thermal-throttling.pdf)
