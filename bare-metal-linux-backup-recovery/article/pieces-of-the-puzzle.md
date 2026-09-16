@@ -25,3 +25,45 @@ From a recovery point of view, however, the same separation means the storage la
 So the operating-system problem is not simply a matter of keeping copies of /etc or reinstalling a few packages. A successful recovery has to recreate a bootable system with the correct disk layout, filesystems, mounts, packages, services and configuration so that the application layers can be restored on top of it.
 
 That is the kind of problem a bare-metal recovery tool is designed to solve.
+
+### Databases
+
+The databases are a very different recovery problem from the operating system.
+
+MariaDB currently occupies roughly **732 GB**, and much of that space is concentrated in a small number of very large tables. The largest contains more than **660 million rows**, while the next largest contains around **28 million**. The databases are also active and continue to grow as new data is collected nightly.
+
+That scale changes the way backups have to be considered.
+
+A database is not just a collection of ordinary files that can be copied and dropped back into place later. The data has to be captured in a consistent state, and the relationships between tables matter. Foreign key constraints, referenced IDs and other dependencies mean that restoring one table in isolation can create inconsistencies elsewhere if the replacement does not match the rest of the database.
+
+For a database of this size, there are two realistic approaches worth considering.
+
+#### Logical backups with 'mariadb-dump'
+
+A logical backup writes SQL that can recreate the database schema and data later.
+
+The main advantages are simplicity and portability. Logical dumps are straightforward to create, easy to inspect, and can be compressed efficiently as they are generated. They can also be split into smaller logical units instead of forcing the entire database into one enormous backup file.
+
+The disadvantage appears during recovery.
+
+Restoring a logical dump means feeding the SQL back through MariaDB and rebuilding the database. Whether the dump uses single-row or extended INSERT statements, the individual rows still have to be processed through the storage engine, written into the tables, and incorporated into the indexes. With hundreds of millions of rows, this can take several hours.
+
+Long imports also increase the cost of an unforeseen interruption. If a very large restore that has been running for hours, fails late in the process, the destination may be left only partially rebuilt. Depending on how the dump was structured, cleanup may be required before another attempt can begin.
+
+Logical backups therefore favour simplicity and flexibility, but the price is paid in restore time.
+
+#### Physical backups with 'mariadb-backup'
+
+MariaDB's native 'mariadb-backup' utility takes a different approach. Instead of recreating the database through SQL, it works with the physical database files.
+
+The main attraction is recovery speed. Restoring prepared database files can be considerably faster than rebuilding hundreds of millions of rows through SQL statements.
+
+That speed comes with different requirements.
+
+A full physical backup can require a large amount of working space if it is first written locally before being moved elsewhere. Compression can reduce the final size, but if the backup is created first and compressed afterwards, the server still needs enough free space to hold the uncompressed backup while that process takes place.
+
+Streaming a physical backup directly to another destination can reduce the local-space requirement, but it also makes the backup and restore procedure more involved. Keeping several historical full physical backups would consume substantial storage, while incremental backups reduce that requirement at the cost of a more complicated backup chain.
+
+`mariadb-backup` therefore favours faster recovery, but introduces additional storage and operational complexity.
+
+For a database of this size, the important question is not simply how easy the backup is to create. The restore path matters just as much. Logical backups favour simplicity and portability; physical backups favour recovery speed.
