@@ -1,6 +1,6 @@
 # From Backup to Recovery: Designing a Disaster-Recovery Strategy for a Bare-Metal Linux Server
 
-# Table of contents
+## Table of contents
 
 1. [Introduction](#introduction)  
    Why backing up a production server is not the same as copying files, and why recovery time, system state, application dependencies and limited remote storage make disaster recovery a broader engineering problem.
