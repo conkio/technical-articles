@@ -2,10 +2,10 @@
 
 ## Table of contents
 
-1. [Introduction](#introduction)  
+1. [Introduction](#article/)
    Why backing up a production server is not the same as copying files, and why recovery time, system state, application dependencies and limited remote storage make disaster recovery a broader engineering problem.
 
-2. [Pieces of the puzzle](#pieces-of-the-puzzle)  
+2. [Pieces of the puzzle](#article/pieces-of-the-puzzle.md)  
    Why the server cannot sensibly be treated as one backup object. This section breaks the system into recovery components and examines what each one actually requires.
 
    - [The operating system](#the-operating-system) — Why recovering a Linux system means reconstructing more than files: storage layout, RAID, boot configuration, networking, services, users, permissions, security settings and system configuration.
@@ -15,7 +15,7 @@
    - [Ordinary files](#ordinary-files) — Application files, scripts, websites and user data that can be handled with more conventional filesystem backup methods.
    - [Compression](#compression) — Using compression selectively to reduce storage and transfer requirements without losing sight of the CPU, working-space and restore-time tradeoffs.
 
-3. [Lay of the land](#lay-of-the-land)  
+3. [Lay of the land](#article/lay-of-the-land.md)  
    The production server itself: its role as an application server, the RAID-backed storage layout, the separate `/var/lib` filesystem, growing MariaDB data, Docker, ordinary application data, and the mismatch between total server data and available remote backup capacity.
 
 4. [Putting the pieces together](#putting-the-pieces-together)  
