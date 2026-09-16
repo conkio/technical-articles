@@ -56,7 +56,7 @@ Logical backups therefore favour simplicity and flexibility, but the price is pa
 
 MariaDB's native `mariadb-backup` utility takes a different approach. Instead of recreating the database through SQL, it works with the physical database files.
 
-The main attraction is recovery speed. Restoring prepared database files can be considerably faster than rebuilding hundreds of millions of rows through SQL statements.
+The main attraction is recovery speed. Restoring prepared database files can be considerably faster than rebuilding hundreds of millions of rows through SQL statements, although a `mariadb-backup` copy is not immediately ready to restore. It must be prepared so that the redo information is applied and the files become consistent. If there are any incremental backups, they must also be applied to the base backup in sequence. This adds another layer of operational complexity although recovery is still relatively fast compared to logical backups, especially with very large databases.
 
 That speed comes with different requirements.
 
@@ -64,6 +64,6 @@ A full physical backup can require a large amount of working space if it is firs
 
 Streaming a physical backup directly to another destination can reduce the local-space requirement, but it also makes the backup and restore procedure more involved. Keeping several historical full physical backups would consume substantial storage, while incremental backups reduce that requirement at the cost of a more complicated backup chain.
 
-`mariadb-backup` therefore favours faster recovery, but introduces additional storage and operational complexity. A `mariadb-backup` copy is not immediately ready to restore. It must be prepared so that the redo information is applied and the files become consistent. If there are any incremental backups, they must also be applied to the base backup in sequence. This adds another layer of operational complexity.
+`mariadb-backup` therefore favours faster recovery, but introduces additional storage and operational complexity.
 
 For a database of this size, the important question is not simply how easy the backup is to create. The restore path matters just as much. Logical backups favour simplicity and portability; physical backups favour recovery speed.
