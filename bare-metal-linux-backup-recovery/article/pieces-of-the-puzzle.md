@@ -18,11 +18,11 @@ That is where recovery becomes more complicated.
 
 Reinstalling AlmaLinux itself would not be difficult. Reproducing the server exactly as it was before a failure is another matter. Apache has to come back with the correct virtual hosts and configuration. PHP has to be available in the versions required by the host-level sites. MariaDB has to be installed and configured correctly before its data can be restored. Users, groups, permissions, cron jobs, firewall rules, network settings, service enablement and the numerous configuration files under /etc all have to return in a consistent state.
 
-The storage layout adds another requirement. /var/lib is intentionally mounted on a separate XFS filesystem backed by its own RAID1 array rather than being part of the root filesystem. This allows the databases, Docker data and local backups stored there to grow independently of the operating system. That separation provides a degree of failure containment. If /var/lib fills because a database or container workload grows unexpectedly, it does not automatically consume the remaining free space on '/' and take the operating system down with it.
+The storage layout adds another requirement. `/var/lib` is intentionally mounted on a separate XFS filesystem backed by its own RAID1 array rather than being part of the root filesystem. This allows the databases, Docker data and local backups stored there to grow independently of the operating system. That separation provides a degree of failure containment. If /var/lib fills because a database or container workload grows unexpectedly, it does not automatically consume the remaining free space on `/` and take the operating system down with it.
 
-From a recovery point of view, however, the same separation means the storage layout has to be recreated correctly before the application state can be put back. The RAID array has to exist, the filesystem has to be created, and /var/lib has to be mounted in the correct place before MariaDB data and the required Docker state can be restored.
+From a recovery point of view, however, the same separation means the storage layout has to be recreated correctly before the application state can be put back. The RAID array has to exist, the filesystem has to be created, and `/var/lib` has to be mounted in the correct place before MariaDB data and the required Docker state can be restored.
 
-So the operating-system problem is not simply a matter of keeping copies of /etc or reinstalling a few packages. A successful recovery has to recreate a bootable system with the correct disk layout, filesystems, mounts, packages, services and configuration so that the application layers can be restored on top of it.
+So the operating-system problem is not simply a matter of keeping copies of `/etc` or reinstalling a few packages. A successful recovery has to recreate a bootable system with the correct disk layout, filesystems, mounts, packages, services and configuration so that the application layers can be restored on top of it.
 
 That is the kind of problem a bare-metal recovery tool is designed to solve.
 
@@ -54,7 +54,7 @@ Logical backups therefore favour simplicity and flexibility, but the price is pa
 
 #### Physical backups with 'mariadb-backup'
 
-MariaDB's native 'mariadb-backup' utility takes a different approach. Instead of recreating the database through SQL, it works with the physical database files.
+MariaDB's native `mariadb-backup` utility takes a different approach. Instead of recreating the database through SQL, it works with the physical database files.
 
 The main attraction is recovery speed. Restoring prepared database files can be considerably faster than rebuilding hundreds of millions of rows through SQL statements.
 
@@ -64,6 +64,6 @@ A full physical backup can require a large amount of working space if it is firs
 
 Streaming a physical backup directly to another destination can reduce the local-space requirement, but it also makes the backup and restore procedure more involved. Keeping several historical full physical backups would consume substantial storage, while incremental backups reduce that requirement at the cost of a more complicated backup chain.
 
-`mariadb-backup` therefore favours faster recovery, but introduces additional storage and operational complexity.
+`mariadb-backup` therefore favours faster recovery, but introduces additional storage and operational complexity. A `mariadb-backup` copy is not immediately ready to restore. It must be prepared so that the redo information is applied and the files become consistent. If there are any incremental backups, they must also be applied to the base backup in sequence. This adds another layer of operational complexity.
 
 For a database of this size, the important question is not simply how easy the backup is to create. The restore path matters just as much. Logical backups favour simplicity and portability; physical backups favour recovery speed.
