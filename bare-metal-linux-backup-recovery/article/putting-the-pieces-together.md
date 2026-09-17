@@ -152,3 +152,11 @@ The existing scripts are already operating, already provide seven daily recovery
 Keeping them therefore follows the same modular principle as the rest of the recovery design: retain a component that already works, strengthen the part that is missing, and avoid redesigning unrelated parts of the system without a clear reason.
 
 If the database recovery requirements change later — for example, if restore time becomes more important than storage efficiency — the database backup method can be replaced or supplemented without changing the operating-system, Docker or file-backup procedures around it.
+
+### Protecting the JSON source archive
+
+This is a slightly different case because the JSON archive does not really need a backup strategy of its own. The files are stored inside the `storage` tree of a Laravel application running under Apache, so they are protected whenever the application tree is backed up. What makes them worth treating separately here is their importance rather than the complexity of backing them up: they contain the raw source data from which the largest database table on the server is derived.
+
+Keeping the JSON inside the application tree also keeps the application code, the processing scripts and the source data they operate on together. That makes the application easier to move or restore as a complete unit and avoids having to locate a separate source archive before the data can be processed again.
+
+The archive itself is managed with a simple retention strategy. Recent JSON files are kept individually available so that a specific day can be inspected or replayed easily, while older periods are grouped into larger archives and compressed as they age. This reduces the storage footprint without sacrificing the ability to reconstruct historical database data if required. Because each nightly snapshot is important to the calculation of subsequent data, the collection process is also duplicated on another server in a separate data centre, providing an independent copy if the primary server fails to capture a particular night's source data.
