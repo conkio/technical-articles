@@ -1,10 +1,12 @@
 ## Putting the pieces together
 
-We have already seen that this server is a hybrid system in more ways than one. It combines a conventional Linux host with Docker-based applications, ordinary LAMP applications, very large databases, raw source data and a separate high-growth filesystem. It follows that the backup strategy also has to be hybrid. There is no single backup method that handles all of those components equally well, especially when the available remote storage is considerably smaller than the server’s usable local storage capacity.
+We have already seen that this server is a hybrid system in more ways than one, combining a conventional Linux host with Docker-based applications, ordinary LAMP applications, very large databases, raw source data and a separate high-growth filesystem. It follows that the backup strategy also has to be hybrid, with no single backup method that can handle all of those components equally well, especially when the available remote storage is considerably smaller than the server’s usable local storage capacity.
 
-The solution is therefore not to look for one perfect backup tool, but to combine several approaches and use each where it makes the most sense. Some parts of the server need to be captured almost exactly, others can be rebuilt from logical backups, some can be regenerated from raw data, and some only need their configuration and essential state preserved. The complication is that all of those methods eventually have to come back together in the correct order to recreate a working system.
+The solution is therefore not to look for one perfect backup tool, but to combine several approaches and use each where it makes the most sense. Some parts of the server need to be captured almost exactly, others can be rebuilt from logical backups, some can even be regenerated from raw data, and some only need their configuration and essential state preserved. The complication is that all of those methods eventually have to come back together in the correct order to recreate a working system.
 
-That also means the recovery plan cannot exist only in the head of the person who designed it. If someone unfamiliar with the server had to take over after a serious failure, they would need enough documentation to understand what has been backed up, where it is stored, which components depend on others, and in what order they must be restored. The documentation therefore becomes part of the recovery system itself.
+There is another advantage to breaking the recovery strategy into smaller pieces: maintainability. A programmer would rarely put an entire application into one enormous function, and the same principle applies here. Keeping the backup and restore procedures compartmentalised makes each one easier to understand, test and modify. If the database backup method changes, for example, there should be no need to redesign the operating-system recovery process at the same time. The same applies if more storage is added, a new application is introduced, or one backup tool is eventually replaced by another. A modular recovery plan is easier to maintain today and much easier to adapt tomorrow.
+
+One final item that would be easy to overlook: the recovery plan cannot exist only in the head of the person who designed it. If someone unfamiliar with the server had to take over after a serious failure, they would need enough documentation to understand what has been backed up, where it is stored, which components depend on others, and in what order they must be restored, and the documentation therefore becomes part of the recovery system itself.
 
 ### ReaR 2.9
 
@@ -18,11 +20,9 @@ That distinction is important. ReaR is not simply another utility for copying fi
 
 #### What ReaR does
 
-During backup preparation, ReaR examines the running system and records its storage layout. That can include disks, partitions, software RAID, filesystems and mount points. It then builds a small bootable Linux recovery environment containing the programs, libraries, kernel modules and configuration required to perform the recovery.
+During backup preparation, ReaR examines the running system and records its storage layout. That can include disks, partitions, software RAID, filesystems and mount points. It then builds a small bootable Linux recovery environment containing the programs, libraries, kernel modules and configuration required to perform the recovery. The result is a rescue image that can be booted independently of the failed operating system. It is not an image of every byte on the server, but instead provides the environment and recovery information needed to rebuild the machine and restore its protected files.
 
-The result is a rescue image that can be booted independently of the failed operating system. It is not an image of every byte on the server. Instead, it provides the environment and recovery information needed to rebuild the machine and restore its protected files.
-
-ReaR separates the **recovery system** from the **data backup**. It can integrate with external backup software, leaving that software responsible for restoring the files, or it can use one of its own built-in backup methods. In this case it uses the internal `NETFS` method with `tar`, allowing the selected filesystem content to be stored separately from the bootable ISO.
+ReaR separates the **recovery system** from the **data backup** and can integrate with external backup software, leaving that software responsible for restoring the files, or it can use one of its own built-in backup methods. In this case it uses the internal `NETFS` method with `tar`, allowing the selected filesystem content to be stored separately from the bootable ISO.
 
 The [online `rear` man page](https://github.com/rear/rear/blob/master/doc/rear.8.md) describes `mkbackup` as the workflow that creates both the rescue media and the system backup when an internal backup method is being used. The ReaR documentation also distinguishes this from `mkrescue`, which creates the recovery environment without creating the associated data backup.
 
@@ -32,9 +32,7 @@ This is what makes ReaR different from an ordinary filesystem backup. Having cop
 
 #### How it is used here
 
-For this server, ReaR is the **operating-system and bare-metal recovery layer** of the wider backup strategy.
-
-It is configured to produce a bootable ISO and a filesystem backup using `NETFS` with `tar`. Both are written to the remote NFS backup storage rather than being left only on the server they are intended to recover.
+For this server, ReaR is the **operating-system and bare-metal recovery layer** of the wider backup strategy, configured to produce a bootable ISO and a filesystem backup using `NETFS` with `tar`. Both are written to the remote NFS backup storage rather than being left only on the server they are intended to recover.
 
 The resulting ReaR set includes the bootable recovery image, the compressed filesystem backup, recovery metadata and logs. The procedure also records additional information about the running system, including installed packages, storage layout, RAID state, mounted filesystems and active services. That information is useful both for verification and for troubleshooting if a future recovery does not behave exactly as expected.
 
@@ -74,8 +72,10 @@ There are many ways to copy the files from a Linux server, but copying files is 
 
 Without a tool such as ReaR, a total-loss recovery would begin with manually reinstalling AlmaLinux, recreating the RAID arrays and filesystems, restoring mount points, reinstalling packages, rebuilding the boot environment, recreating users and permissions, restoring system configuration and enabling services. Only after all of that had been completed could the application data itself begin to be restored.
 
+Even after all of that work, however, the result may still be little more than a basic working installation. Updates may still need to be applied, specific package or runtime versions installed, and smaller configuration differences resolved before the server truly matches the production environment it replaces. None of this is impossible, but every additional manual step adds time to a recovery process whose main objective is to get the system back online as quickly as possible.
+
 ReaR turns much of that work into a repeatable recovery procedure.
 
-It also fits the hybrid nature of this backup strategy particularly well. ReaR does not have to carry the hundreds of gigabytes of database and Docker data because those components already have their own recovery paths. By excluding them, ReaR can concentrate on the part it is particularly well suited to restoring: the underlying Linux host and the environment on which everything else depends.
+It also fits the hybrid nature of this backup strategy particularly well. ReaR does not have to carry the hundreds of gigabytes of database and Docker data because those components already have their own recovery paths, and by excluding them, ReaR can concentrate on the part it is particularly well suited to restoring: the underlying Linux host and the environment on which everything else depends.
 
 ReaR was therefore chosen not because it solves every part of the recovery problem, but because it solves one particularly difficult part very well — returning the bare-metal machine to a bootable, correctly configured state on which the remaining application and data layers can then be restored.
