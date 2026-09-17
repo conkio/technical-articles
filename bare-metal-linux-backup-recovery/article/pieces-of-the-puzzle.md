@@ -67,3 +67,17 @@ Streaming a physical backup directly to another destination can reduce the local
 `mariadb-backup` therefore favours faster recovery, but introduces additional storage and operational complexity.
 
 For a database of this size, the important question is not simply how easy the backup is to create. The restore path matters just as much. Logical backups favour simplicity and portability; physical backups favour recovery speed.
+
+### Raw source data
+
+Not all of the application data on the server originates in the same way.
+
+Some data is collected from external services and written directly into a database. One example is data retrieved through the Google Ads API, which is processed as it is collected rather than being retained separately in its original form.
+
+The accommodation-booking data is handled differently. Each nightly API collection is first saved as JSON before being processed and imported into MariaDB. Those files are therefore more than temporary working data: they are the raw source from which the corresponding database records can be recreated if necessary.
+
+That is particularly useful because the booking-engine data represents a point-in-time snapshot. Daily request and demand figures are derived by comparing one snapshot with the previous day's, so successfully capturing each snapshot matters. Once it has been saved, however, the JSON can be processed later because the relevant dates and times are already contained in the data.
+
+The raw JSON therefore needs to be protected alongside the database backups. It provides an additional recovery path if database data has to be reconstructed, while other application data that is written directly into a database depends more heavily on the database backup itself.
+
+Other services on the server, including n8n and Weaviate, also interact with application data, but their internal mechanics are not important to the recovery strategy. The objective is simply to make sure that the applications, their configuration and the data they depend on can be restored to a working state.
