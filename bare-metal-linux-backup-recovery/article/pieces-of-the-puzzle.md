@@ -114,3 +114,29 @@ The more important question is which parts are needed to return the applications
 Some of the Docker applications also depend on MariaDB databases running directly on the host rather than maintaining their own database daemon inside the container. That means the application environment and its database are separate recovery components, but they still depend on one another. Restoring the container alone is not enough if the host-level database, credentials, configuration and network access have not also been restored correctly.
 
 Docker therefore simplifies dependency management during normal operation, but it adds another recovery layer. The objective is to preserve enough application state and configuration to recreate each working environment quickly and reconnect it to the services and data it depends on, while keeping the backup footprint as small as possible. That said, it is not necessary to preserve every image, cache and temporary layer that Docker has accumulated.
+
+### Ordinary files
+
+Compared with the operating system, databases and Docker, ordinary files are the easy part of a backup. Source code, scripts and configuration files are usually just text, which makes them easy to inspect, edit, verify and compress.
+
+That does not make them unimportant.
+
+Some of the applications on this server do not need Docker because they are conventional LAMP applications that can use the PHP and supporting software already installed on the host. Their files live under the normal Apache web tree and can therefore be protected with a conventional filesystem backup.
+
+The developers also maintain their source code in GitHub, but that serves a different purpose. A repository protects the development history; a server backup protects the deployed state.
+
+In a perfect world, the two should match exactly. In practice, the production server may contain configuration changes, generated files, uploaded assets or code that has not yet been pushed back to the repository. Even where the repository is completely up to date, rebuilding a failed server by locating and cloning every individual application repository adds unnecessary work to an already time-sensitive recovery.
+
+For that reason, preserving the live application tree is still useful even when the source is safely stored elsewhere.
+
+Administrative and recovery scripts are even more important.
+
+The server uses scripts to automate backups, restore data and process some of the raw information collected by the applications. These files are small and easy to back up, but they may be required before other parts of the system can be restored.
+
+This creates something of a **chicken-and-egg problem**.
+
+For example, if a database table has to be rebuilt from the retained booking-engine JSON, preserving the raw data alone is not enough. The PHP script that parses the JSON, performs the required calculations and writes the results back into MariaDB must also be available. Without that script, the source data may be intact but the recovery process cannot proceed.
+
+The same applies to backup and restore scripts themselves. If they are part of the recovery procedure, they need to be accessible early enough in the process to do their job rather than being buried inside a component that has not yet been restored.
+
+This is why the simplest files to back up are not necessarily the least important. Many are plain-text source code, scripts and configuration files, so they are easy to copy, inspect and compress. But some of them provide the instructions and tools needed to restore everything else.
