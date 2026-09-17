@@ -81,3 +81,36 @@ That is particularly useful because the booking-engine data represents a point-i
 The raw JSON therefore needs to be protected alongside the database backups. It provides an additional recovery path if database data has to be reconstructed, while other application data that is written directly into a database depends more heavily on the database backup itself.
 
 Other services on the server, including n8n and Weaviate, also interact with application data, but their internal mechanics are not important to the recovery strategy. The objective is simply to make sure that the applications, their configuration and the data they depend on can be restored to a working state.
+
+### Docker containers
+
+Docker is used on this server because the applications it runs have a particularly diverse set of runtime requirements and dependencies.
+
+Different applications may require different versions of PHP, Python, libraries, package managers and supporting components. Trying to satisfy all of those dependencies directly through the host operating system would make the server harder to maintain and increase the risk of one application's requirements conflicting with another's.
+
+Running the applications in separate Docker containers avoids much of that problem. Each application can have its own controlled environment with the versions and dependencies it requires, while the AlmaLinux host remains comparatively simple.
+
+From a recovery point of view, however, Docker introduces another layer that has to be considered.
+
+Reinstalling Docker itself is straightforward. Recreating the exact working application environments is not necessarily so. A usable recovery may need the application code, container or build definitions, configuration, environment settings, persistent volumes or bind-mounted data, and any locally maintained state that is not reproduced simply by pulling an original image again.
+
+At first glance, the obvious solution might be to back up the entire `/var/lib/docker` directory. On this server, that directory currently occupies around **436 GB**, but that figure is misleading if it is treated as the amount of irreplaceable Docker data.
+
+Docker reports roughly:
+
+| Docker data | Approximate size |
+| --- | ---: |
+| Images | 35.9 GB |
+| Containers | 0.6 GB |
+| Local volumes | 24.0 GB |
+| Build cache | 361.8 GB |
+
+More than **333 GB** of the build cache is considered reclaimable by Docker itself.
+
+That makes an important distinction. A large amount of occupied Docker storage consists of cached build data and older image layers that can be recreated. Backing up every byte under `/var/lib/docker` would therefore consume a large amount of remote storage without necessarily improving recovery.
+
+The more important question is which parts are needed to return the applications to service quickly.
+
+Some of the Docker applications also depend on MariaDB databases running directly on the host rather than maintaining their own database daemon inside the container. That means the application environment and its database are separate recovery components, but they still depend on one another. Restoring the container alone is not enough if the host-level database, credentials, configuration and network access have not also been restored correctly.
+
+Docker therefore simplifies dependency management during normal operation, but it adds another recovery layer. The objective is to preserve enough application state and configuration to recreate each working environment quickly and reconnect it to the services and data it depends on, while keeping the backup footprint as small as possible. That said, it is not necessary to preserve every image, cache and temporary layer that Docker has accumulated.
