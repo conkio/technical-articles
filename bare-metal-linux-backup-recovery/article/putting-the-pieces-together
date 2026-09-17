@@ -1,0 +1,7 @@
+## Putting the pieces together
+
+We have already seen that this server is a hybrid system in more ways than one. It combines a conventional Linux host with Docker-based applications, ordinary LAMP applications, very large databases, raw source data and a separate high-growth filesystem. It follows that the backup strategy also has to be hybrid. There is no single backup method that handles all of those components equally well, especially when the available remote storage is considerably smaller than the server’s usable local storage capacity.
+
+The solution is therefore not to look for one perfect backup tool, but to combine several approaches and use each where it makes the most sense. Some parts of the server need to be captured almost exactly, others can be rebuilt from logical backups, some can be regenerated from raw data, and some only need their configuration and essential state preserved. The complication is that all of those methods eventually have to come back together in the correct order to recreate a working system.
+
+That also means the recovery plan cannot exist only in the head of the person who designed it. If someone unfamiliar with the server had to take over after a serious failure, they would need enough documentation to understand what has been backed up, where it is stored, which components depend on others, and in what order they must be restored. The documentation therefore becomes part of the recovery system itself.
