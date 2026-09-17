@@ -140,3 +140,28 @@ For example, if a database table has to be rebuilt from the retained booking-eng
 The same applies to backup and restore scripts themselves. If they are part of the recovery procedure, they need to be accessible early enough in the process to do their job rather than being buried inside a component that has not yet been restored.
 
 This is why the simplest files to back up are not necessarily the least important. Many are plain-text source code, scripts and configuration files, so they are easy to copy, inspect and compress. But some of them provide the instructions and tools needed to restore everything else.
+
+### The big squeeze
+
+With remote backup space at a premium, compression becomes an important part of the overall strategy. But it is not simply a matter of taking a large file, running it through a compressor and assuming the result will be dramatically smaller. Compression depends heavily on the contents of the file and type of data involved.
+
+Text-based data such as SQL dumps, JSON, logs, source code, and configuration files often compresses extremely well because it contains large amounts of repeated structure and text. Other file types may already be compressed or may contain data that does not compress efficiently, so the reduction can be much smaller, almost negligible. The size of the original data therefore does not necessarily tell us how much backup space it will ultimately consume.
+
+There is also another consideration: **compression itself can require working space**.
+
+A logical MariaDB dump is a good example of how that requirement can be kept small. The output from `mariadb-dump` can be piped directly to a compressor like `gzip`. The full uncompressed SQL dump never has to exist as a separate file on disk. Data is produced by `mariadb-dump`, passed directly to the compressor and written out in compressed form.
+
+A physical backup created with `mariadb-backup` can be handled in several ways. If the full backup is first written locally and then compressed afterwards, the server may temporarily need enough free space for both the physical backup and the compressed archive. On a database already occupying hundreds of gigabytes, that additional headroom can be significant.
+
+That is a consequence of the compression path chosen rather than an inherent requirement of `mariadb-backup`, whose output can indeed be streamed and piped through a compressor so that a complete uncompressed copy does not have to be retained locally. This reduces the temporary storage requirement substantially, although it also makes the backup procedure a little more involved.
+
+The same issue can reappear during recovery. A compressed physical backup may need to be extracted and prepared before MariaDB can use it, and the backup archive, extracted data and final database can potentially compete for space if they all reside on the same storage.
+
+If the backup lives on remote storage and is streamed or extracted directly onto a sufficiently large recovery volume, much of that temporary duplication can be avoided. Where the intermediate files are stored can therefore be just as important as the final compressed size.
+
+Directory trees introduce another practical issue. Compressing thousands of files individually would produce an awkward collection of separate compressed objects and would make transport and recovery unnecessarily cumbersome. A more practical approach is to archive the directory tree using `tar` and compress the resulting stream as part of the same operation.
+
+
+`tar` preserves the directory structure and file metadata while presenting the backup as a single archive. It can also compress the archive as it is created, so there is no requirement to first create a large uncompressed `.tar` file and then compress it as a separate operation. The result is easier to store, verify, transfer and restore than a directory containing thousands of individual backup files.
+
+Compression therefore does more than reduce the amount of remote storage required; it makes backups easier to handle and transport. It's also not simply about compression ratio, but about the complete path that must be considered as part of the design — how the backup is produced, where temporary data is written, how it is transferred, and how much working space will be required again during recovery.
