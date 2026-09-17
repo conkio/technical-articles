@@ -92,7 +92,7 @@ The output from `mariadb-dump` is streamed directly through compression rather t
 
 The scripts use strict shell error handling so that failures in the dump or compression pipeline are not silently ignored. Backup output is also checked after creation, including verification that the compressed files can be read successfully, and while that does not prove that a database can be fully restored — only an actual restore test can do that — it does catch obvious failures such as incomplete or corrupt compressed output.
 
-#### Breaking the databases into manageable units
+#### Breaking up the large tables
 
 The larger databases are not backed up as one monolithic file.
 
@@ -133,7 +133,7 @@ The disaster-recovery strategy therefore treats the local backup as the first co
 
 This is an example of strengthening an existing process rather than replacing it while the logical backup scripts already work and already divide the databases in a way that suits recovery. The wider disaster-recovery design simply adds the off-server protection they need.
 
-#### Supporting the restore order
+#### Restoring the newest data first
 
 The way the backups are divided also defines the way they can be restored.
 
