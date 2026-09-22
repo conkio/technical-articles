@@ -1,0 +1,13 @@
+{
+  "model_rounds": 17,
+  "tool_calls": 16,
+  "tool_calls_by_name": {
+    "analyze_file": 10,
+    "find_same_hash": 1,
+    "read_file_region": 5
+  },
+  "successful_raw_region_reads": 4,
+  "rejected_raw_region_reads": 1,
+  "reported_input_tokens_sum": 294139,
+  "reported_output_tokens_sum": 3557
+}

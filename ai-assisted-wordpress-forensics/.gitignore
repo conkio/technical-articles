@@ -1,0 +1,25 @@
+# Compromised evidence and extracted working copies
+evidence/
+working/
+
+# Large/reference distributions
+reference/
+
+# Python environment/cache
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+
+# Generated forensic reports may contain sensitive evidence
+reports/

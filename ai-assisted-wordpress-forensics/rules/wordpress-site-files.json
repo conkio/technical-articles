@@ -1,0 +1,20 @@
+{
+  "wp-config.php": {
+    "classification": "expected-site-specific",
+    "review": "required",
+    "priority": "high",
+    "reason": "Expected on an installed WordPress site but security-sensitive and capable of containing executable PHP."
+  },
+  ".htaccess": {
+    "classification": "expected-site-specific",
+    "review": "required",
+    "priority": "high",
+    "reason": "Common site-specific configuration file that can contain redirects and execution rules."
+  },
+  "robots.txt": {
+    "classification": "expected-site-specific",
+    "review": "recommended",
+    "priority": "low",
+    "reason": "Common site-specific file not distributed as WordPress core."
+  }
+}

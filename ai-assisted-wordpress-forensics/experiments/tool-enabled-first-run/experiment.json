@@ -1,0 +1,13 @@
+{
+  "experiment": "tool-enabled-first-run",
+  "model": "gpt-5.6-luna",
+  "investigation_rounds": 3,
+  "tool_calls": 16,
+  "inspect_file_calls": 15,
+  "find_same_hash_calls": 1,
+  "code_execution": false,
+  "filesystem_write_tools": false,
+  "arbitrary_shell_access": false,
+  "key_result": "Agent established 43 exact copies of the repeated 3700-byte payload using deterministic hash evidence.",
+  "baseline_comparison": "Report-only run had incorrectly conflated 48 unexpected PHP files with the repeated hash group."
+}

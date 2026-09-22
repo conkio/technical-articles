@@ -1,0 +1,19 @@
+{
+  "experiment": "tool-enabled-v2-first-run",
+  "model": "gpt-5.6-luna",
+  "code_commit": "b2ddad3e5c875ce0dbf6b5d09865ad2a7f372f66",
+  "case_type": "real compromised WordPress multisite backup",
+  "filesystem_execution": false,
+  "shell_access": false,
+  "write_tools": false,
+  "network_tools": false,
+  "architecture": [
+    "deterministic initial reports",
+    "structured static file analysis",
+    "exact hash matching",
+    "gated raw-region inspection",
+    "explicit untrusted-evidence boundary"
+  ],
+  "result": "Agent independently established compromise from supplied evidence and constrained read-only tools.",
+  "limitation": "Tool and prompt design evolved using knowledge gained from this incident; this run does not establish generalization to unseen cases."
+}
