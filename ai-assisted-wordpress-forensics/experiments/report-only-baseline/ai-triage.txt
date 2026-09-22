@@ -1,0 +1,241 @@
+{
+  "overall_assessment": {
+    "conclusion": "The evidence supports a high-confidence possibility of compromise and warrants immediate incident-response investigation. It does not, from these reports alone, conclusively prove that every unexpected file is malicious.",
+    "confidence": "high",
+    "basis": [
+      "An official WordPress root file, index.php, is modified from 405 bytes to 36,575 bytes.",
+      "There are 48 unexpected PHP files in WordPress core-controlled directories, many hidden and identically sized and hashed.",
+      "There are additional unexpected PHP files with nonstandard names in the web root and wp-includes, including unusually large files.",
+      "Several PHP files exist under uploads and cache locations. Some are plausibly generated or protective files, but PHP in web-accessible uploads is security-sensitive and requires content review.",
+      "The archive contains 15,879 PHP files, so the listed findings are not an exhaustive malware determination."
+    ],
+    "severity": "high"
+  },
+  "facts": [
+    {
+      "finding": "Core comparison",
+      "details": "Of 3,338 reference WordPress files, 3,337 are identical, one is modified, and none are missing. There are 50 unexpected files, including 48 unexpected PHP files."
+    },
+    {
+      "finding": "Modified official core file",
+      "path": "public/index.php",
+      "details": "The reference file is 405 bytes with SHA-256 eea9347b1e266ca5407b92633958c148dbfebea307e511a3a226ea61828e2eba. The site file is 36,575 bytes with SHA-256 deba6e50340f9f69fb5e35f30e9f6598e51d5130b53ef2c13629dbb8a04b5b5a."
+    },
+    {
+      "finding": "Repeated hidden PHP files",
+      "details": "At least 48 unexpected PHP files in wp-admin and wp-includes locations are 3,700 bytes and share SHA-256 b45fc7c8b72d4f712213bdcfbee13f76ffd05796a4435836ac8d941967b3ee1c. They are placed under core-controlled directories and commonly use hidden names such as .wp-admin.php, .css.php, .includes.php, and .rest-api.php."
+    },
+    {
+      "finding": "Additional unexpected root PHP files",
+      "paths": [
+        "public/ai.php",
+        "public/ammika.php",
+        "public/saiga.php",
+        "public/.public.php"
+      ],
+      "details": "These files are not part of the compared WordPress core set and are located in the web root. Their names and placement are not sufficient to prove maliciousness, but they are high-priority review targets."
+    },
+    {
+      "finding": "Large unexpected PHP files in wp-includes",
+      "paths": [
+        "public/wp-includes/customize/nav.php",
+        "public/wp-includes/html-api/decoder.php",
+        "public/wp-includes/html-api/foot.php"
+      ],
+      "details": "These files are unexpected relative to the reference tree and have sizes of 58,595, 105,002, and 963,133 bytes respectively. Their locations are core-controlled, and the unusually large foot.php is especially suspicious."
+    },
+    {
+      "finding": "Site-specific security-sensitive files",
+      "paths": [
+        "public/wp-config.php",
+        "public/.htaccess"
+      ],
+      "details": "Both are expected site-specific files, but wp-config.php can contain executable PHP and credentials, while .htaccess can implement redirects, access controls, or execution rules. They require content review rather than being treated as benign."
+    },
+    {
+      "finding": "PHP and configuration-like content under uploads",
+      "details": "The archive flags 95 members as potential code in uploads. These include empty index.php files, small .htaccess files, wpallimport functions.php files, LayerSlider index.php files, and numerous WPML Twig-generated PHP cache files. Some patterns are consistent with legitimate plugin upload protection or generated cache, but uploads are normally untrusted and web-accessible."
+    },
+    {
+      "finding": "Archive integrity and object types",
+      "details": "The archive contains no symlinks, hardlinks, special files, or unsafe archive members. This reduces archive-extraction concerns but does not address malicious PHP content."
+    },
+    {
+      "finding": "Multisite scope",
+      "details": "The uploads findings include site-specific paths for sites/2 and sites/3, indicating that the investigation must consider network-wide impact rather than only the primary site."
+    }
+  ],
+  "priority_findings": [
+    {
+      "priority": 1,
+      "finding": "Modified public/index.php",
+      "why_it_matters": "A large modification to an official WordPress entry-point file can provide execution on virtually every request, install hooks, redirect traffic, load a backdoor, or conditionally hide malicious behavior. The size difference is substantial and is not explained by normal WordPress site configuration.",
+      "requested_action": "Obtain and statically inspect the complete file, compare it line-by-line with the exact reference version, and identify every include, callback, dynamic-code operation, external URL, credential reference, and obfuscation construct."
+    },
+    {
+      "priority": 2,
+      "finding": "Repeated 3,700-byte hidden PHP files in core directories",
+      "why_it_matters": "The repeated content hash across many unrelated core subdirectories strongly suggests automated persistence or mass deployment. Hidden PHP files in directories that normally contain core code can be used as web shells, loaders, or fallback access paths.",
+      "requested_action": "Obtain the complete content of one representative file with hash b45fc7c8b72d4f712213bdcfbee13f76ffd05796a4435836ac8d941967b3ee1c, plus hashes, ownership, permissions, and timestamps for every occurrence. Confirm whether all occurrences are byte-identical."
+    },
+    {
+      "priority": 3,
+      "finding": "Unexpected root PHP files",
+      "why_it_matters": "Root-level files named ai.php, ammika.php, saiga.php, and .public.php are directly reachable in the web root and are not part of the compared core distribution. Such files commonly serve as droppers, web shells, redirectors, or persistence mechanisms, although legitimate custom code cannot be ruled out without content and deployment records.",
+      "requested_action": "Obtain complete contents, file metadata, ownership, permissions, and web-server access history for each file. Determine whether any application code, rewrite rule, plugin, or deployment process references them."
+    },
+    {
+      "priority": 4,
+      "finding": "Unexpected large wp-includes PHP files",
+      "why_it_matters": "Unexpected files in wp-includes can be loaded indirectly by compromised core or plugins. The 963,133-byte foot.php is particularly anomalous for a file in this location and may contain embedded payloads or obfuscated data.",
+      "requested_action": "Obtain complete contents and static-analysis results for nav.php, decoder.php, and foot.php, including printable strings, encoded blobs, included files, and network destinations. Compare them against the exact WordPress version and any known plugin packages."
+    },
+    {
+      "priority": 5,
+      "finding": "wp-config.php and .htaccess",
+      "why_it_matters": "wp-config.php may contain database credentials, salts, custom bootstrap code, and malicious includes. .htaccess may redirect selected visitors, enable unexpected handlers, deny investigators access, or route requests to payloads.",
+      "requested_action": "Obtain complete contents through a protected evidence-handling process, with secrets redacted only in the analyst-facing copy and an unredacted copy preserved securely. Review all PHP outside standard configuration constants, includes, auto-prepend directives, rewrite rules, redirects, and handler changes."
+    },
+    {
+      "priority": 6,
+      "finding": "PHP in uploads and generated cache",
+      "why_it_matters": "Some files are likely legitimate defense files or generated Twig templates, but executable PHP under uploads can become a direct execution path if web-server controls are weak. A malicious file may also be hidden among legitimate plugin-generated files.",
+      "requested_action": "Review the contents of all non-empty PHP and .htaccess files flagged under uploads, beginning with wpallimport/functions.php, the LayerSlider index.php files, and all WPML Twig cache files. Determine whether PHP execution is disabled for each uploads subtree and whether these files are referenced by installed plugin versions."
+    },
+    {
+      "priority": 7,
+      "finding": "Timeline and coordinated modification activity",
+      "why_it_matters": "Many suspicious core-directory files share closely grouped modification times, while the modified index.php and root files have different times. This may indicate one or more deployment or compromise waves.",
+      "requested_action": "Obtain filesystem metadata with timezone and clock-source information, backup/deployment records, plugin and core update history, web-server logs, PHP-FPM logs, authentication logs, and administrator audit records covering the earliest suspicious timestamp through acquisition."
+    }
+  ],
+  "requested_evidence": [
+    {
+      "category": "Complete file contents",
+      "items": [
+        "public/index.php",
+        "public/ai.php",
+        "public/ammika.php",
+        "public/saiga.php",
+        "public/.public.php",
+        "public/wp-includes/customize/nav.php",
+        "public/wp-includes/html-api/decoder.php",
+        "public/wp-includes/html-api/foot.php",
+        "public/wp-config.php",
+        "public/.htaccess",
+        "public/robots.txt"
+      ],
+      "handling": "Provide static copies or excerpts sufficient for analysis; do not execute the files. Preserve original hashes and an unmodified evidence copy."
+    },
+    {
+      "category": "Repeated hidden-file payload",
+      "items": [
+        "Complete content of one or more files with SHA-256 b45fc7c8b72d4f712213bdcfbee13f76ffd05796a4435836ac8d941967b3ee1c",
+        "A complete path-to-hash inventory of every occurrence",
+        "File owner, group, mode, size, birth time if available, mtime, ctime, and atime for every occurrence"
+      ]
+    },
+    {
+      "category": "All unexpected PHP files",
+      "items": [
+        "A complete list of all 48 unexpected PHP paths, including any omitted from the report",
+        "SHA-256 hashes and sizes for each",
+        "Static contents of every unique hash, not necessarily every duplicate copy"
+      ]
+    },
+    {
+      "category": "Uploads and cache review",
+      "items": [
+        "Contents of every non-empty PHP file under public/wp-content/uploads",
+        "Contents of every .htaccess file under public/wp-content/uploads",
+        "Contents of the flagged WPML Twig cache files",
+        "Relevant plugin versions and vendor/source files for WP All Import, LayerSlider, WPML, WooCommerce, and Avia"
+      ]
+    },
+    {
+      "category": "Runtime and web-server configuration",
+      "items": [
+        "Web-server virtual-host configuration",
+        "PHP-FPM or equivalent pool configuration",
+        "PHP ini settings relevant to auto_prepend_file, auto_append_file, disable_functions, open_basedir, and URL-aware file access",
+        "Rules governing PHP execution in wp-content/uploads and other writable directories",
+        "Cron configuration, systemd timers, and hosting control-panel scheduled tasks"
+      ]
+    },
+    {
+      "category": "Logs and access evidence",
+      "items": [
+        "Web access and error logs for all sites in the multisite network",
+        "PHP-FPM/application logs",
+        "WordPress or security-plugin audit logs",
+        "SSH, SFTP, FTP, hosting-panel, and deployment logs",
+        "Database audit or query logs if available"
+      ],
+      "scope": "At minimum, cover the period before the earliest suspicious timestamp through the time of acquisition."
+    },
+    {
+      "category": "WordPress and multisite state",
+      "items": [
+        "Exact WordPress version and checksums",
+        "Installed, active, network-active, and recently removed plugins and themes",
+        "Plugin and theme versions and package hashes",
+        "wp-content/mu-plugins contents",
+        "Network and site administrator accounts, recent account changes, and capability changes",
+        "Database export of relevant options, users, usermeta, site, sitemeta, cron, and active_plugins values"
+      ],
+      "handling": "Provide database evidence as a read-only export or query result; do not alter the live database."
+    },
+    {
+      "category": "Forensic timeline",
+      "items": [
+        "Full filesystem metadata inventory for PHP, JavaScript, .htaccess, and configuration files",
+        "Backup and restore history",
+        "Core, plugin, and theme update history",
+        "Known-good prior snapshots for comparison"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesis": "The modified index.php and hidden PHP files may represent a coordinated compromise or persistence mechanism.",
+      "support": "The official entry point is substantially enlarged, and many hidden files with identical content are distributed through core-controlled directories.",
+      "confidence": "high",
+      "qualification": "The file contents and access timeline are still required for confirmation."
+    },
+    {
+      "hypothesis": "The root-level files ai.php, ammika.php, saiga.php, and .public.php may be web shells, loaders, redirectors, or other attacker-controlled endpoints.",
+      "support": "They are unexpected PHP files placed directly in the web root.",
+      "confidence": "medium-to-high",
+      "qualification": "Custom site code or an undocumented deployment artifact remains possible."
+    },
+    {
+      "hypothesis": "The unexpected wp-includes files may be malicious additions rather than legitimate WordPress files.",
+      "support": "They are absent from the reference tree, occur in core-controlled locations, and include unusually large files.",
+      "confidence": "high for requiring investigation, not yet conclusive for maliciousness."
+    },
+    {
+      "hypothesis": "Many upload-directory flags are legitimate plugin protection files or generated templates.",
+      "support": "Empty index.php files, small directory-protection files, wpallimport paths, LayerSlider paths, and WPML Twig cache paths are consistent with normal plugin behavior.",
+      "confidence": "medium",
+      "qualification": "Legitimate-looking locations do not establish safety; contents and server execution rules must be checked."
+    },
+    {
+      "hypothesis": "The site may have experienced more than one modification or persistence event.",
+      "support": "Suspicious files have grouped but nonuniform modification times and occur in multiple network sites and directory classes.",
+      "confidence": "medium",
+      "qualification": "Filesystem timestamps can be altered or affected by restoration and deployment operations."
+    }
+  ],
+  "unknowns": [
+    "The actual contents and behavior of the modified and unexpected PHP files are not provided.",
+    "It is unknown whether any suspicious file is reachable over HTTP or included by WordPress, a plugin, a theme, or server configuration.",
+    "It is unknown whether PHP execution is permitted in any uploads or cache directory.",
+    "It is unknown whether wp-config.php or .htaccess contains malicious additions, redirects, credential exposure, or persistence directives.",
+    "The exact WordPress version, plugin/theme inventory, and corresponding known-good packages are not provided.",
+    "There is no information about administrator account changes, authentication events, web requests, outbound connections, cron jobs, or database persistence.",
+    "The provenance of the files is unknown: they could have been created by an attacker, a compromised plugin, a deployment process, or an undocumented administrator action.",
+    "The reported modification times may not reflect creation or compromise times and may be affected by clock skew, restoration, copying, or timestamp manipulation.",
+    "No conclusion can yet be made about data access, credential theft, lateral movement, or compromise of other systems.",
+    "The absence of unsafe archive members, symlinks, hardlinks, and special files does not establish that the application was uncompromised."
+  ]
+}
