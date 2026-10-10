@@ -8,12 +8,12 @@
 2. [Pieces of the puzzle](article/pieces-of-the-puzzle.md)  
    Why the server cannot sensibly be treated as one backup object. This section breaks the system into recovery components and examines what each one actually requires.
 
-   - [The operating system](the-operating-system) — Why recovering a Linux system means reconstructing more than files: storage layout, RAID, boot configuration, networking, services, users, permissions, security settings and system configuration.
+   - [The operating system](article/pieces-of-the-puzzle.md#the-operating-system) — Why recovering a Linux system means reconstructing more than files: storage layout, RAID, boot configuration, networking, services, users, permissions, security settings and system configuration.
    - [Databases](databases) — The tradeoff between logical SQL dumps and physical backups with `mariadb-backup`, including restore time, storage requirements, consistency and the problems created by very large tables.
-   - [Raw source data](raw-source-data) — The booking-engine JSON snapshots that feed the largest database tables, why the capture itself is time-sensitive, and why those files form an independent recovery path.
-   - [Docker](#docker) — Separating persistent and difficult-to-recreate state from images, containers and hundreds of gigabytes of disposable build cache.
-   - [Ordinary files](ordinary-files) — Application files, scripts, websites and user data that can be handled with more conventional filesystem backup methods.
-   - [The big squeeze](compression) — Using compression selectively to reduce storage and transfer requirements without losing sight of the CPU, working-space and restore-time tradeoffs.
+   - [Raw source data](article/pieces-of-the-puzzle.md#raw-source-data) — The booking-engine JSON snapshots that feed the largest database tables, why the capture itself is time-sensitive, and why those files form an independent recovery path.
+   - [Docker](article/pieces-of-the-puzzle.md#docker-containers) — Separating persistent and difficult-to-recreate state from images, containers and hundreds of gigabytes of disposable build cache.
+   - [Ordinary files](article/pieces-of-the-puzzle.md#ordinary-files) — Application files, scripts, websites and user data that can be handled with more conventional filesystem backup methods.
+   - [The big squeeze](article/pieces-of-the-puzzle.md#the-big-squeeze) — Using compression selectively to reduce storage and transfer requirements without losing sight of the CPU, working-space and restore-time tradeoffs.
 
 3. [Lay of the land](article/lay-of-the-land.md)  
    The production server itself: its role as an application server, the RAID-backed storage layout, the separate `/var/lib` filesystem, growing MariaDB data, Docker, ordinary application data, and the mismatch between total server data and available remote backup capacity.
