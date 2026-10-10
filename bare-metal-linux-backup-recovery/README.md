@@ -9,7 +9,7 @@
    Why the server cannot sensibly be treated as one backup object. This section breaks the system into recovery components and examines what each one actually requires.
 
    - [The operating system](article/pieces-of-the-puzzle.md#the-operating-system) — Why recovering a Linux system means reconstructing more than files: storage layout, RAID, boot configuration, networking, services, users, permissions, security settings and system configuration.
-   - [Databases](databases) — The tradeoff between logical SQL dumps and physical backups with `mariadb-backup`, including restore time, storage requirements, consistency and the problems created by very large tables.
+   - [Databases](article/pieces-of-the-puzzle.md#databases) — The tradeoff between logical SQL dumps and physical backups with `mariadb-backup`, including restore time, storage requirements, consistency and the problems created by very large tables.
    - [Raw source data](article/pieces-of-the-puzzle.md#raw-source-data) — The booking-engine JSON snapshots that feed the largest database tables, why the capture itself is time-sensitive, and why those files form an independent recovery path.
    - [Docker](article/pieces-of-the-puzzle.md#docker-containers) — Separating persistent and difficult-to-recreate state from images, containers and hundreds of gigabytes of disposable build cache.
    - [Ordinary files](article/pieces-of-the-puzzle.md#ordinary-files) — Application files, scripts, websites and user data that can be handled with more conventional filesystem backup methods.
