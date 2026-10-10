@@ -8,7 +8,7 @@ There is another advantage to breaking the recovery strategy into smaller pieces
 
 One final item that would be easy to overlook: the recovery plan cannot exist only in the head of the person who designed it. If someone unfamiliar with the server had to take over after a serious failure, they would need enough documentation to understand what has been backed up, where it is stored, which components depend on others, and in what order they must be restored, and the documentation therefore becomes part of the recovery system itself.
 
-### ReaR 2.9
+### ReaR for system recovery
 
 [Relax-and-Recover (ReaR)](https://relax-and-recover.org/rear-user-guide/) is a Linux disaster-recovery framework designed primarily for bare-metal recovery. The version used here is **ReaR 2.9**, which the project lists as supporting RHEL 9 and compatible distributions including AlmaLinux 9.
 
