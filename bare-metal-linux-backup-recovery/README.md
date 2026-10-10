@@ -18,7 +18,7 @@
 3. [Lay of the land](article/lay-of-the-land.md)  
    The production server itself: its role as an application server, the RAID-backed storage layout, the separate `/var/lib` filesystem, growing MariaDB data, Docker, ordinary application data, and the mismatch between total server data and available remote backup capacity.
 
-4. [Putting the pieces together](article/putting-the-pieces-together)  
+4. [Putting the pieces together](article/putting-the-pieces-together.md)  
    The actual recovery strategy chosen for this server, and why. Rather than replacing everything with a new backup platform, the design reuses working components where possible and adds the missing pieces needed for disaster recovery.
 
    - [ReaR for system recovery](rear-for-system-recovery) — Using Relax-and-Recover to capture the machine-level layout and operating-system environment and provide a bare-metal recovery path.
