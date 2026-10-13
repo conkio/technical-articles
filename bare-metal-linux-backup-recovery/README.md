@@ -22,7 +22,7 @@
    The actual recovery strategy chosen for this server, and why. Rather than replacing everything with a new backup platform, the design reuses working components where possible and adds the missing pieces needed for disaster recovery.
 
    - [ReaR for system recovery](article/putting-the-pieces-together.md#rear-for-system-recovery) — Using Relax-and-Recover to capture the machine-level layout and operating-system environment and provide a bare-metal recovery path.
-   - [Testing the ReaR Backup](article/testing-the-rear-recovery.md) - Restoring the backup in a VirtualBox VM, addressing recovery challenges, and verifying that the operating system can be successfully recovered.
+   - [Testing the ReaR Backup](article/testing-the-rear-backup.md) - Restoring the backup in a VirtualBox VM, addressing recovery challenges, and verifying that the operating system can be successfully recovered.
    - [Using the existing database backups](article/putting-the-pieces-together.md#using-the-existing-database-backups) — Why the already-running seven-day logical backup rotation was retained initially instead of replacing it immediately with `mariadb-backup`.
      - [Breaking up the large tables](article/putting-the-pieces-together.md#breaking-up-the-large-tables) — Dumping the 660-million-row table in monthly chunks, the 28-million-row table separately, and the remaining tables together so that long restores become restartable and manageable.
      - [Restoring the newest data first](article/putting-the-pieces-together.md#restoring-the-newest-data-first) — Using the date-based structure of the largest table to restore recent months before older history, allowing the most useful data to become available while the full restore continues.
