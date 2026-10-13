@@ -91,4 +91,4 @@ A complete production recovery would still require restoring those excluded data
 
 Nevertheless, the exercise significantly increased our confidence in the recovery strategy. Rather than relying on the existence of an ISO and a compressed archive, we now have practical evidence that the operating system can be reconstructed and started on an independent machine.
 
-For a detailed, repeatable procedure, see the [ReaR VM Recovery Test Guide](../guides/).
+For a detailed, repeatable procedure, see the [ReaR VM Recovery Test Guide](../guides/ReaR%20VM%20Recovery%20Test%20Guide.docx).
