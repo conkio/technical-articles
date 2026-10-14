@@ -139,6 +139,8 @@ The way the backups are divided also defines the way they can be restored.
 
 The schema is restored first so that the tables and database structure exist before data is imported. The ordinary tables can then be restored, followed by the larger tables that have been separated into their own backup files.
 
+To make the restoration sequence clear, each SQL backup file and relevant directory is assigned a numerical prefix (00_, 10_, 20_, etc.). These prefixes indicate the order in which the backups should be imported, starting with the schema (00_) and progressing through the remaining data files. Where a directory contains multiple monthly backups, those files can be restored individually in chronological or reverse chronological order, depending on the recovery requirements.
+
 The monthly `daily_requests` dumps provide an additional advantage. The newest month can be restored first, followed by progressively older months. That matters because a full import of hundreds of millions of rows can take a considerable amount of time. If the application depends most heavily on recent data, restoring the newest periods first can return the most useful part of the service while the older historical data continues to be imported in the background.
 
 The backup structure therefore does more than make the files easier to handle. It becomes part of the recovery strategy itself.
